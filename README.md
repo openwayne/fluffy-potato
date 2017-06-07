@@ -38,3 +38,11 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 (New-Object Net.WebClient).DownloadFile($uri, $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath("~\AppData\Local\nvim\autoload\plug.vim"))
 ```
 
+
+#### ERROR
+```
+YouCompleteMe unavailable: requires Vim compiled with Python (2.6+ or 3.3+) support
+UltiSnips requires py >= 2.7 or py3
+Error: Required vim compiled with +python
+```
+just install neovim form pip like this `pip install neovim`
