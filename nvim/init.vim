@@ -23,7 +23,7 @@ Plug 'mattn/emmet-vim'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar'
-Plug 'kien/ctrlp.vim' 
+Plug 'ctrlpvim/ctrlp.vim' 
 Plug 'vim-scripts/xml.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'flazz/vim-colorschemes'
@@ -63,7 +63,7 @@ Plug 'Lokaltog/vim-easymotion'
     Plug 'airblade/vim-gitgutter'
     Plug 'jeetsukumaran/vim-buffergator'
     Plug 'bling/vim-bufferline'
-    Plug 'sbdchd/neoformat'
+    Plug 'Chiel92/vim-autoformat'
 " }
 
 " Snippets & AutoComplete {
