@@ -63,6 +63,7 @@ Plug 'Lokaltog/vim-easymotion'
     Plug 'airblade/vim-gitgutter'
     Plug 'jeetsukumaran/vim-buffergator'
     Plug 'bling/vim-bufferline'
+    Plug 'sbdchd/neoformat'
 " }
 
 " Snippets & AutoComplete {
@@ -116,6 +117,7 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
+
 let g:go_highlight_build_constraints = 1
 
 au FileType go nmap <Leader>i <Plug>(go-info)
@@ -142,7 +144,6 @@ nnoremap <C-a> :bp<CR>
 
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-
 
 "improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
@@ -218,7 +219,7 @@ map <leader>n :nohl<CR>
 "  映射NERDTree插件
 "let loaded_nerd_tree=1
 "let NERDTreeQuitOnOpen = 0
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 let NERDChristmasTree=1
 let g:NERDTreeWinSize = 32 
 map <leader>f :NERDTreeToggle<CR>
@@ -300,6 +301,15 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   " Ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+  " Use ag (the silver searcher)
+  " https://github.com/ggreer/the_silver_searcher
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts =
+              \ '-i --line-numbers --nocolor ' .
+              \ '--nogroup --hidden --ignore ' .
+              \ '''.hg'' --ignore ''.svn'' --ignore' .
+              \ ' ''.git'' --ignore ''.bzr'''
+  let g:unite_source_grep_recursive_opt = ''
 endif
 
 let g:ctrlp_map = '<c-p>'
