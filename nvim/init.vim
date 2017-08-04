@@ -70,6 +70,7 @@ Plug 'Lokaltog/vim-easymotion'
     Plug 'Valloric/YouCompleteMe'
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
+    Plug 'vim-syntastic/syntastic'
 " }
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -100,6 +101,17 @@ call plug#end()
 
 
 "Check syntastic by neomake
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq=1
+
 "autocmd BufWritePost * Neomake
 "autocmd BufEnter * Neomake
 "autocmd VimEnter * UpdateRemotePlugins .
