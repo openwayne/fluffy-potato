@@ -4,6 +4,8 @@ my terminal config.
 --------
 please install `vim-plug` first.
 
+if u want format jsx, u should visit [prettier.io](https://prettier.io/docs/en/install.html) install it by `yarn global add prettier`
+
 #### Vim
 
 ###### Unix

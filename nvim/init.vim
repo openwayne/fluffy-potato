@@ -361,6 +361,8 @@ nmap w] :vertical resize +3<CR>
 nmap w- :resize -3<CR>
 nmap w= :resize +3<CR>
 
+au BufWrite * :Autoformat
+
 "scss,sass
 au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.sass set filetype=scss
@@ -374,6 +376,15 @@ au BufRead,BufNewFile *.skim set filetype=slim
 
 "for python
 au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent
+
+let g:formatdef_prettier = '"prettier --single-quote --tab-width 4 --jsx-bracket-same-line"'
+let g:formatters_js = ['prettier']
+let g:formatters_javascript = ['prettier']
+let g:formatters_jsx = ['prettier']
+let g:formatters_css = ['prettier']
+let g:formatters_less = ['prettier']
+let g:formatters_html = ['prettier']
+let g:formatters_scss = ['prettier']
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
