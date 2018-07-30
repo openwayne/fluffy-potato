@@ -364,7 +364,7 @@ nmap w] :vertical resize +3<CR>
 nmap w- :resize -3<CR>
 nmap w= :resize +3<CR>
 
-au BufWrite * :Autoformat
+"au BufWrite * :Autoformat
 
 "scss,sass
 au BufRead,BufNewFile *.scss set filetype=scss
@@ -378,7 +378,7 @@ au BufWritePost *.coffee :CoffeeCompile watch vert
 au BufRead,BufNewFile *.skim set filetype=slim
 
 "for python
-au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent
+"au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent
 
 let g:formatdef_prettier = '"prettier --single-quote --tab-width 4 --jsx-bracket-same-line"'
 let g:formatters_js = ['prettier']
