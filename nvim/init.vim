@@ -1,5 +1,5 @@
 syntax on
-set autoread
+" set autoread
 " set color theme
 "colorscheme busybee
 
@@ -13,9 +13,6 @@ set background=dark
 " colorscheme solarized
 
 hi Normal ctermfg=252 ctermbg=none
-
-" Configuration section of vundle
-filetype off  " required!
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -97,6 +94,9 @@ Plug 'thoughtbot/vim-rspec'
 "Plugin(s) for Rust
 Plug 'rust-lang/rust.vim'
 
+"Plugin(s) for typescript
+Plug 'leafgarland/typescript-vim'
+
 call plug#end()
 
 
@@ -116,29 +116,15 @@ let g:syntastic_check_on_wq=1
 "autocmd BufEnter * Neomake
 "autocmd VimEnter * UpdateRemotePlugins .
 
-filetype plugin indent on     " required!
+" Configuration section of vundle
+filetype on "检测文件类型
+filetype plugin on " 加载相关类型文件插件
+filetype plugin indent on "为特定文件类型载入相关缩进文件
+
 " End of vundle configuration
 
 "For vim-move
 let g:move_key_modifier = 'C'
-
-
-"Settings for Golang
-let g:go_fmt_command = "goimports"
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-
-let g:go_highlight_build_constraints = 1
-
-au FileType go nmap <Leader>i <Plug>(go-info)
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap gd <Plug>(go-def-tab)
 
 "For Youdao Translater Plugin
 vnoremap <silent> <C-T> <Esc>:Ydv<CR>
@@ -199,6 +185,15 @@ set cindent shiftwidth=4
 set autoindent shiftwidth=4
 set expandtab
 
+" 标尺相关 
+set colorcolumn=85
+"set cursorline
+autocmd InsertLeave * se nocul    
+autocmd InsertEnter * se cul  
+
+" 去掉输入错误的提示声音
+set noeb
+
 " set 折叠
 set foldmethod=indent
 " 打开文件默认不折叠
@@ -257,33 +252,6 @@ let g:EasyMotion_leader_key = ","
 
 "Settings for TagBar
 map <leader>g :TagbarToggle<CR>
-let g:tagbar_type_go = {
-            \ 'ctagstype' : 'go',
-            \ 'kinds' : [
-            \ 'p:package',
-            \ 'i:imports:1',
-            \ 'c:constants',
-            \ 'v:variables',
-            \ 't:types',
-            \ 'n:interfaces',
-            \ 'w:fields',
-            \ 'e:embedded',
-            \ 'm:methods',
-            \ 'r:constructor',
-            \ 'f:functions'
-            \ ],
-            \ 'sro' : '.',
-            \ 'kind2scope' : {
-            \ 't' : 'ctype',
-            \ 'n' : 'ntype'
-            \ },
-            \ 'scope2kind' : {
-            \ 'ctype' : 't',
-            \ 'ntype' : 'n'
-            \ },
-            \ 'ctagsbin' : 'gotags',
-            \ 'ctagsargs' : '-sort -silent'
-            \ }
 
 "switch window
 :map <leader>w <C-W>w
@@ -328,7 +296,8 @@ if executable('ag')
 endif
 
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png,*.gif,*.jpeg,.DS_Store,node_modules/*
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$|node_modules$'
 let g:ctrlp_working_path_mode=0
 let g:ctrlp_match_window_bottom=1
 let g:ctrlp_max_height=15
@@ -337,9 +306,6 @@ let g:ctrlp_mruf_max=500
 let g:ctrlp_follow_symlinks=1
 "use in  edit
 imap <C-A> <C-C><c-p>
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png,*.gif,*.jpeg,.DS_Store  " MacOSX/Linux
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " move lines up or down (command - D)
 nmap <D-j> mz:m+<cr>`z
@@ -364,23 +330,27 @@ nmap w] :vertical resize +3<CR>
 nmap w- :resize -3<CR>
 nmap w= :resize +3<CR>
 
+" 自动格式化,太卡了。。。
 "au BufWrite * :Autoformat
-
-"scss,sass
-au BufRead,BufNewFile *.scss set filetype=scss
-au BufRead,BufNewFile *.sass set filetype=scss
-
-"coffee script
-au BufWritePost *.coffee silent CoffeeMake!
-au BufWritePost *.coffee :CoffeeCompile watch vert
 
 "let skim use slim syntax
 au BufRead,BufNewFile *.skim set filetype=slim
 
 "for python
-"au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent
+au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent
 
-let g:formatdef_prettier = '"prettier --single-quote --tab-width 4 --jsx-bracket-same-line"'
+"scss,sass
+au BufRead,BufNewFile *.scss set filetype=scss
+au BufRead,BufNewFile *.sass set filetype=scss
+
+"for typescript or js or axml or acss or json
+au BufRead,BufNewFile *.tsx,*.js,*.axml,*.acss set shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab autoindent
+au BufNewFile,BufRead *.wxml set filetype=html
+au BufNewFile,BufRead *.wxss set filetype=scss
+au BufNewFile,BufRead *.axml set filetype=html
+au BufNewFile,BufRead *.acss set filetype=scss
+
+let g:formatdef_prettier = '"prettier --single-quote --tab-width 2 --jsx-bracket-same-line"'
 let g:formatters_js = ['prettier']
 let g:formatters_javascript = ['prettier']
 let g:formatters_jsx = ['prettier']
@@ -412,11 +382,6 @@ set signcolumn=yes
 
 " Run deoplete.nvim automatically
 let g:deoplete#enable_at_startup = 1
-" deoplete-go settings
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-let g:deoplete#sources#go#use_cache = 1
-let g:deoplete#sources#go#json_directory = '~/.cache/deoplete/go/'
 
 " code search
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -427,7 +392,6 @@ silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 let g:startify_custom_header = [
             \ 'FUCKING EVERY DAY!',
             \]
-
 
 "youcompleteme  默认tab  s-tab 和自动补全冲突
 let g:ycm_key_list_select_completion=['<c-n>']
@@ -449,3 +413,4 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
+
