@@ -383,9 +383,6 @@ set signcolumn=yes
 " Run deoplete.nvim automatically
 let g:deoplete#enable_at_startup = 1
 
-" code search
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
 " For startify
