@@ -188,8 +188,10 @@ set expandtab
 " 标尺相关 
 set colorcolumn=85
 "set cursorline
-autocmd InsertLeave * se nocul    
-autocmd InsertEnter * se cul  
+autocmd InsertLeave * se nocul
+autocmd InsertEnter * se cul
+autocmd InsertLeave * se nocuc
+autocmd InsertEnter * se cuc
 
 " 去掉输入错误的提示声音
 set noeb
