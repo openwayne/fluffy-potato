@@ -40,6 +40,19 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 (New-Object Net.WebClient).DownloadFile($uri, $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath("~\AppData\Local\nvim\autoload\plug.vim"))
 ```
 
+#### local config
+just link `your git path`/fluffy-potato/tmux/.tmux.conf to `~/.tmux.conf`
+
+```sh
+ln -s {your git path}/fluffy-potato/tmux/.tmux.conf ~/.tmux.conf
+ln -s {your git path}/fluffy-potato/tmux/.tmux.conf.local ~/.tmux.conf.local
+
+# if you want try nvim just append this lines to .zshrc / .bashrc
+alias vim=nvim
+alias vi=nvim
+
+ln -s ~/.config/nvim {your git path}/fluffy-potato/nvim
+```
 
 #### ERROR
 ```
