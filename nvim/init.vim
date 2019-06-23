@@ -346,7 +346,7 @@ au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.sass set filetype=scss
 
 "for typescript or js or axml or acss or json
-au BufRead,BufNewFile *.tsx,*.js,*.axml,*.acss set shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab autoindent
+au BufRead,BufNewFile *.tsx,*.ts,*.js,*.axml,*.acss,*.json,*.html,*.htm set shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab autoindent
 au BufNewFile,BufRead *.wxml set filetype=html
 au BufNewFile,BufRead *.wxss set filetype=scss
 au BufNewFile,BufRead *.axml set filetype=html
