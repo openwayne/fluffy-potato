@@ -51,7 +51,7 @@ ln -s {your git path}/fluffy-potato/tmux/.tmux.conf.local ~/.tmux.conf.local
 alias vim=nvim
 alias vi=nvim
 
-ln -s ~/.config/nvim {your git path}/fluffy-potato/nvim
+ln -s {your git path}/fluffy-potato/nvim ~/.config/nvim 
 ```
 
 #### ERROR
