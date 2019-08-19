@@ -60,7 +60,6 @@ Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'bling/vim-bufferline'
-Plug 'Chiel92/vim-autoformat'
 Plug 'sbdchd/neoformat'
 
 " Snippets & AutoComplete {
@@ -332,8 +331,6 @@ nmap w] :vertical resize +3<CR>
 nmap w- :resize -3<CR>
 nmap w= :resize +3<CR>
 
-" 自动格式化,太卡了。。。
-"au BufWrite * :Autoformat
 "let skim use slim syntax
 au BufRead,BufNewFile *.skim set filetype=slim
 
