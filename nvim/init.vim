@@ -338,10 +338,9 @@ au BufRead,BufNewFile *.skim set filetype=slim
 au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent
 
 "scss,sass
-au BufRead,BufNewFile *.sass set filetype=scss
-au BufNewFile,BufRead *.wxml set filetype=vue
+au BufNewFile,BufRead *.wxml set filetype=html
 au BufNewFile,BufRead *.wxss set filetype=less
-au BufNewFile,BufRead *.axml set filetype=vue
+au BufNewFile,BufRead *.axml set filetype=html
 au BufNewFile,BufRead *.acss set filetype=less
 
 "for typescript or js or axml or acss or json
