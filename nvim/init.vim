@@ -344,7 +344,7 @@ let g:prettier#exec_cmd_async = 1
 " when running at every change you may want to disable quickfix
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#autoformat = 0
-autocmd BufWritePre,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.axml,*.acss,*.wcss,*.wxml PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.axml,*.acss,*.wcss,*.wxml PrettierAsync
 
 "" Enable omni completion.
 "autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
