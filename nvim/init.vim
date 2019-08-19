@@ -337,6 +337,22 @@ nmap w= :resize +3<CR>
 
 " 自动格式化,太卡了。。。
 "au BufWrite * :Autoformat
+"let skim use slim syntax
+au BufRead,BufNewFile *.skim set filetype=slim
+
+"for python
+au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent
+
+"scss,sass
+au BufRead,BufNewFile *.scss set filetype=scss
+au BufRead,BufNewFile *.sass set filetype=scss
+
+"for typescript or js or axml or acss or json
+au BufRead,BufNewFile *.tsx,*.ts,*.js,*.axml,*.acss,*.json,*.html,*.htm set shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab autoindent
+au BufNewFile,BufRead *.wxml set filetype=html
+au BufNewFile,BufRead *.wxss set filetype=scss
+au BufNewFile,BufRead *.axml set filetype=html
+au BufNewFile,BufRead *.acss set filetype=scss
 
 " prettier#exec_cmd_async by default is synchronous but can also be forced async
 let g:prettier#exec_cmd_async = 1
