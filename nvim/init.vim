@@ -60,11 +60,7 @@ Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'bling/vim-bufferline'
-Plug 'Chiel92/vim-autoformat'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
-" }
+Plug 'sbdchd/neoformat'
 
 " Snippets & AutoComplete {
 Plug 'Valloric/YouCompleteMe'
@@ -335,8 +331,6 @@ nmap w] :vertical resize +3<CR>
 nmap w- :resize -3<CR>
 nmap w= :resize +3<CR>
 
-" 自动格式化,太卡了。。。
-"au BufWrite * :Autoformat
 "let skim use slim syntax
 au BufRead,BufNewFile *.skim set filetype=slim
 
@@ -349,18 +343,28 @@ au BufRead,BufNewFile *.sass set filetype=scss
 
 "for typescript or js or axml or acss or json
 au BufRead,BufNewFile *.tsx,*.ts,*.js,*jsx,*.axml,*.acss,*.json,*.html,*.htm set shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab autoindent
-au BufNewFile,BufRead *.wxml set filetype=jsx
-au BufNewFile,BufRead *.wxss set filetype=scss
+au BufNewFile,BufRead *.wxml set filetype=html
+au BufNewFile,BufRead *.wxss set filetype=less
 au BufNewFile,BufRead *.axml set filetype=html
-au BufNewFile,BufRead *.acss set filetype=scss
+au BufNewFile,BufRead *.acss set filetype=less
 
-" prettier#exec_cmd_async by default is synchronous but can also be forced async
-let g:prettier#exec_cmd_async = 1
+"for typescript or js or axml or acss or json
+au BufRead,BufNewFile *.tsx,*.ts,*.js,*.axml,*.acss,*.json,*.html,*.htm,*.less set shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab autoindent
 
-" when running at every change you may want to disable quickfix
-let g:prettier#config#bracket_spacing = 'true'
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.axml,*.acss,*.wcss,*.wxml PrettierAsync
+" add neoformat files
+let g:neoformat_try_formatprg = 1
+
+" Enable alignment
+let g:neoformat_basic_format_align = 1
+
+" Enable tab to spaces conversion
+let g:neoformat_basic_format_retab = 1
+
+" Enable trimmming of trailing whitespace
+let g:neoformat_basic_format_trim = 1
+let g:neoformat_only_msg_on_error = 1
+
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.axml,*.acss,*.wcss,*.wxml Neoformat
 
 "" Enable omni completion.
 "autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
