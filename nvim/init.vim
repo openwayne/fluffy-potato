@@ -347,6 +347,7 @@ au BufNewFile,BufRead *.wxml set filetype=html
 au BufNewFile,BufRead *.wxss set filetype=less
 au BufNewFile,BufRead *.axml set filetype=html
 au BufNewFile,BufRead *.acss set filetype=less
+au BufNewFile,BufRead *.tsx set filetype=typescript
 
 "for typescript or js or axml or acss or json
 au BufRead,BufNewFile *.tsx,*.ts,*.js,*.axml,*.acss,*.json,*.html,*.htm,*.less set shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab autoindent
