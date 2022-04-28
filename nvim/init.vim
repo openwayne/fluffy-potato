@@ -3,6 +3,10 @@ syntax on
 " set color theme
 "colorscheme busybee
 
+let g:move_key_modifier = 'C'
+let mapleader="\<Space>"
+let g:mapleader="\<Space>"
+
 let g:loaded_netrw = 1
 let g:loaded_netrwPlugin = 1
 
@@ -13,91 +17,6 @@ set background=dark
 " colorscheme solarized
 
 hi Normal ctermfg=252 ctermbg=none
-
-call plug#begin('~/.local/share/nvim/plugged')
-
-Plug 'mattn/emmet-vim'
-Plug 'ervandew/supertab'
-Plug 'scrooloose/nerdcommenter'
-Plug 'majutsushi/tagbar'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-scripts/xml.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'flazz/vim-colorschemes'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rails'
-Plug 'Lokaltog/vim-easymotion'
-
-" Deps {
-if executable('ag')
-    Plug 'mileszs/ack.vim'
-    let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
-endif
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" }
-" General {
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'rhysd/conflict-marker.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'gcmt/wildfire.vim'
-" }
-
-" General Programming {
-Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-commentary'
-Plug 'godlygeek/tabular'
-Plug 'luochen1990/rainbow'
-Plug 'majutsushi/tagbar'
-Plug 'airblade/vim-gitgutter'
-Plug 'jeetsukumaran/vim-buffergator'
-Plug 'bling/vim-bufferline'
-Plug 'sbdchd/neoformat'
-
-" Snippets & AutoComplete {
-Plug 'Valloric/YouCompleteMe'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'vim-syntastic/syntastic'
-" }
-
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'zchee/deoplete-jedi'
-
-Plug 'neomake/neomake'
-Plug 'mhinz/vim-startify'
-Plug 'vim-scripts/wildfire.vim'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'ianva/vim-youdao-translater'
-Plug 'matze/vim-move'
-Plug 'pbrisbin/vim-mkdir'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-
-"Plugins for ruby
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-rails'
-Plug 'thoughtbot/vim-rspec'
-
-"Plugin(s) for Rust
-Plug 'rust-lang/rust.vim'
-
-"Plugin(s) for typescript
-Plug 'leafgarland/typescript-vim'
-
-call plug#end()
-
 
 "Check syntastic by neomake
 set statusline+=%#warningmsg#
@@ -122,23 +41,10 @@ filetype plugin indent on "为特定文件类型载入相关缩进文件
 
 " End of vundle configuration
 
-"For vim-move
-let g:move_key_modifier = 'C'
-
-"For Youdao Translater Plugin
-vnoremap <silent> <C-T> <Esc>:Ydv<CR>
-nnoremap <silent> <C-T> <Esc>:Ydc<CR>
-
-"inoremap jj <Esc>
-
 "Powerline setting
 let g:airline_theme = 'jellybeans'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-
-nnoremap <C-s> :bn<CR>
-nnoremap <C-a> :bp<CR>
-
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
@@ -197,32 +103,16 @@ set noeb
 
 " set 折叠
 set foldmethod=indent
+
 " 打开文件默认不折叠
 set foldlevelstart=99
-
-" sh打开终端
-nnoremap <leader>z :new<CR>:terminal<CR>source $HOME/.zshrc<CR>c<CR>
-
-"set my leader
-let mapleader="\<Space>"
-let g:mapleader="\<Space>"
-
-"tabs
-nmap <leader>tn :tabnew<cr>
-nmap <leader>te :tabedit
-nmap <leader>tc :tabclose<cr>
-nmap <leader>tm :tabmove
 
 "For Rust settings
 let g:rustfmt_autosave = 1
 
-"For neomake
-map <leader>m :Neomake<CR>
 let g:neomake_open_list = 2
 let g:neomake_list_height = 7
 
-"Disable highlight
-map <leader>n :nohl<CR>
 
 "  映射NERDTree插件
 "let loaded_nerd_tree=1
@@ -230,12 +120,11 @@ map <leader>n :nohl<CR>
 "autocmd vimenter * NERDTree
 let NERDChristmasTree=1
 let g:NERDTreeWinSize = 32
-map <leader>f :NERDTreeToggle<CR>
 
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom= {
             \ "Modified"  : "✹",
             \ "Staged"    : "✚",
             \ "Untracked" : "✭",
@@ -250,12 +139,6 @@ let g:NERDTreeIndicatorMapCustom = {
 
 " Settings for vim-easymotion
 let g:EasyMotion_leader_key = ","
-
-"Settings for TagBar
-map <leader>g :TagbarToggle<CR>
-
-"switch window
-:map <leader>w <C-W>w
 
 "set zen coding
 let g:user_zen_settings = {
@@ -305,31 +188,7 @@ let g:ctrlp_max_height=15
 let g:ctrlp_match_window_reversed=0
 let g:ctrlp_mruf_max=500
 let g:ctrlp_follow_symlinks=1
-"use in  edit
-imap <C-A> <C-C><c-p>
 
-" move lines up or down (command - D)
-nmap <D-j> mz:m+<cr>`z
-nmap <D-k> mz:m-2<cr>`z
-vmap <D-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <D-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-" Tab move lines left or right (c-Ctrl,s-Shift)
-nmap    <c-tab>     v>
-nmap    <s-tab>     v<
-vmap    <c-tab>     >gv
-vmap    <s-tab>     <gv
-
-" tab navigation like zsh
-:nmap <leader>h :tabprevious<CR>
-:nmap <leader>l :tabnext<CR>
-
-" settings for resize splitted window
-nmap w[ :vertical resize -3<CR>
-nmap w] :vertical resize +3<CR>
-
-nmap w- :resize -3<CR>
-nmap w= :resize +3<CR>
 
 "let skim use slim syntax
 au BufRead,BufNewFile *.skim set filetype=slim
@@ -395,24 +254,38 @@ let g:startify_custom_header = [
             \ 'FUCKING EVERY DAY!',
             \]
 
-"youcompleteme  默认tab  s-tab 和自动补全冲突
-let g:ycm_key_list_select_completion=['<c-n>']
-"let g:ycm_key_list_select_completion = ['<Down>']
-let g:ycm_key_list_previous_completion=['<c-p>']
-"let g:ycm_key_list_previous_completion = ['<Up>']
+""youcompleteme  默认tab  s-tab 和自动补全冲突
+"let g:ycm_key_list_select_completion=['<c-n>']
+""let g:ycm_key_list_select_completion = ['<Down>']
+"let g:ycm_key_list_previous_completion=['<c-p>']
+""let g:ycm_key_list_previous_completion = ['<Up>']
+"
+"let g:ycm_collect_identifiers_from_tags_files=1 " 开启 YCM 基于标签引擎
+"let g:ycm_min_num_of_chars_for_completion=2 " 从第2个键入字符就开始罗列匹配项
+"let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
+"nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+""nnoremap <leader>lo :lopen<CR> "open locationlist
+""nnoremap <leader>lc :lclose<CR>    "close locationlist
+""在注释输入中也能补全
+"let g:ycm_complete_in_comments = 1
+""在字符串输入中也能补全
+"let g:ycm_complete_in_strings = 1
+""注释和字符串中的文字也会被收入补全
+"let g:ycm_collect_identifiers_from_comments_and_strings = 0
+"
 
-let g:ycm_collect_identifiers_from_tags_files=1 " 开启 YCM 基于标签引擎
-let g:ycm_min_num_of_chars_for_completion=2 " 从第2个键入字符就开始罗列匹配项
-let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-"nnoremap <leader>lo :lopen<CR> "open locationlist
-"nnoremap <leader>lc :lclose<CR>    "close locationlist
-"在注释输入中也能补全
-let g:ycm_complete_in_comments = 1
-"在字符串输入中也能补全
-let g:ycm_complete_in_strings = 1
-"注释和字符串中的文字也会被收入补全
-let g:ycm_collect_identifiers_from_comments_and_strings = 0
+let g:UltiSnipsExpandTrigger="<tab>"
 
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
+" init plugins
+runtime ./plug.vim
+runtime ./maps.vim
+
+" init macos special config
+if has("unix")
+  let s:uname = system("uname -s")
+  " Do Mac stuff
+  if s:uname == "Darwin\n"
+    runtime ./macos.vim
+  endif
+endif
 
