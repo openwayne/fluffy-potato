@@ -10,6 +10,11 @@ let g:mapleader="\<Space>"
 let g:loaded_netrw = 1
 let g:loaded_netrwPlugin = 1
 
+" disable ruby and perl and node
+let g:loaded_perl_provider = 0
+let g:loaded_ruby_provider = 0
+let g:loaded_node_provider = 0
+
 set t_Co=16
 " let g:solarized_termcolors=256
 set background=dark
