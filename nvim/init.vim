@@ -259,26 +259,6 @@ let g:startify_custom_header = [
             \ 'FUCKING EVERY DAY!',
             \]
 
-""youcompleteme  默认tab  s-tab 和自动补全冲突
-"let g:ycm_key_list_select_completion=['<c-n>']
-""let g:ycm_key_list_select_completion = ['<Down>']
-"let g:ycm_key_list_previous_completion=['<c-p>']
-""let g:ycm_key_list_previous_completion = ['<Up>']
-"
-"let g:ycm_collect_identifiers_from_tags_files=1 " 开启 YCM 基于标签引擎
-"let g:ycm_min_num_of_chars_for_completion=2 " 从第2个键入字符就开始罗列匹配项
-"let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
-"nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-""nnoremap <leader>lo :lopen<CR> "open locationlist
-""nnoremap <leader>lc :lclose<CR>    "close locationlist
-""在注释输入中也能补全
-"let g:ycm_complete_in_comments = 1
-""在字符串输入中也能补全
-"let g:ycm_complete_in_strings = 1
-""注释和字符串中的文字也会被收入补全
-"let g:ycm_collect_identifiers_from_comments_and_strings = 0
-"
-
 let g:UltiSnipsExpandTrigger="<tab>"
 
 " init plugins

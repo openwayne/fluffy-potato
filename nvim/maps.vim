@@ -56,5 +56,3 @@ nmap    <c-tab>     v>
 nmap    <s-tab>     v<
 vmap    <c-tab>     >gv
 vmap    <s-tab>     <gv
-
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
