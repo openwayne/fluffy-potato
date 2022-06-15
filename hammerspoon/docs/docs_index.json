@@ -1,0 +1,3426 @@
+[
+  {
+    "desc": "Just another clock, floating above all.",
+    "name": "AClock",
+    "type": "Module"
+  },
+  {
+    "desc": "Hide AClock.",
+    "module": "AClock",
+    "name": "hide",
+    "type": "Method"
+  },
+  {
+    "desc": "init.",
+    "module": "AClock",
+    "name": "init",
+    "type": "Method"
+  },
+  {
+    "desc": "Show AClock.",
+    "module": "AClock",
+    "name": "show",
+    "type": "Method"
+  },
+  {
+    "desc": "Show AClock for 4 seconds. If already showing, hide it.",
+    "module": "AClock",
+    "name": "toggleShow",
+    "type": "Method"
+  },
+  {
+    "desc": "Show AClock. If already showing, hide it.",
+    "module": "AClock",
+    "name": "toggleShowPersistent",
+    "type": "Method"
+  },
+  {
+    "desc": "Listens for keyboard brightness keypresses and alters brightness on all supported displays.",
+    "name": "AllBrightness",
+    "type": "Module"
+  },
+  {
+    "desc": "Simple spoon for launching apps with single letter hotkeys.",
+    "name": "AppLauncher",
+    "type": "Module"
+  },
+  {
+    "desc": "Modifier keys used when launching apps",
+    "module": "AppLauncher",
+    "name": "modifiers",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for AppLauncher",
+    "module": "AppLauncher",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Utilities for arranging your desktop how you like it.",
+    "name": "ArrangeDesktop",
+    "type": "Module"
+  },
+  {
+    "desc": "Contains the configured desktop arrangements",
+    "module": "ArrangeDesktop",
+    "name": "arrangements",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "ArrangeDesktop",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Add menu items to a table for each configured desktop arrangment.",
+    "module": "ArrangeDesktop",
+    "name": "addMenuItems",
+    "type": "Method"
+  },
+  {
+    "desc": "Arrange the desktop based on a given configuration",
+    "module": "ArrangeDesktop",
+    "name": "arrange",
+    "type": "Method"
+  },
+  {
+    "desc": "Build up the configuration for the current desktop arrangement and log it to the Hammerspoon console.",
+    "module": "ArrangeDesktop",
+    "name": "logCurrentArrangement",
+    "type": "Method"
+  },
+  {
+    "desc": "Simple spoon that creates a new task in Asana with a given name in a given workspace.",
+    "name": "Asana",
+    "type": "Module"
+  },
+  {
+    "desc": "A \"personal access token\" for Asana. You can create one here: https://app.asana.com/0/developer-console",
+    "module": "Asana",
+    "name": "apiKey",
+    "type": "Variable"
+  },
+  {
+    "desc": "Creates a new task named `taskName` in the workspace `workspaceName`.",
+    "module": "Asana",
+    "name": "createTask",
+    "type": "Method"
+  },
+  {
+    "desc": "Use Bing daily picture as your wallpaper, automatically.",
+    "name": "BingDaily",
+    "type": "Module"
+  },
+  {
+    "desc": "List advertised services on your network that match defined templates and provide a list for the user to access them.",
+    "name": "BonjourLauncher",
+    "type": "Module"
+  },
+  {
+    "desc": "Set whether the BonjourLauncher chooser window should apoear dark themed, aqua themed (light) or track the current system settings for Dark mode. Defaults to nil.",
+    "module": "BonjourLauncher",
+    "name": "darkMode",
+    "type": "Variable"
+  },
+  {
+    "desc": "Whether or not to display a toolbar at the top of the BonjourLauncher chooser window. Defaults to true.",
+    "module": "BonjourLauncher",
+    "name": "displayToolbar",
+    "type": "Variable"
+  },
+  {
+    "desc": "The number of rows to display when the chooser is visible. Defaults to 10.",
+    "module": "BonjourLauncher",
+    "name": "rows",
+    "type": "Variable"
+  },
+  {
+    "desc": "Sets the color of the subText for each service listed in the BonjourLauncher chooser window. Defaults to nil.",
+    "module": "BonjourLauncher",
+    "name": "subTextColor",
+    "type": "Variable"
+  },
+  {
+    "desc": "A table specifying the service types which the BonjourLauncher looks for on your network and defines how to display and launch discovered services.",
+    "module": "BonjourLauncher",
+    "name": "templates",
+    "type": "Variable"
+  },
+  {
+    "desc": "Sets the color of the primary text for each service listed in the BonjourLauncher chooser window. Defaults to nil.",
+    "module": "BonjourLauncher",
+    "name": "textColor",
+    "type": "Variable"
+  },
+  {
+    "desc": "The width of the BonjourLauncher chooser window as a percentage of the screen size. Defaults to 40.",
+    "module": "BonjourLauncher",
+    "name": "width",
+    "type": "Variable"
+  },
+  {
+    "desc": "Add predefined recipes to [BonjourLauncher.templates](#templates) for display by the BonjourLauncher chooser.",
+    "module": "BonjourLauncher",
+    "name": "addRecipes",
+    "type": "Method"
+  },
+  {
+    "desc": "Binds hotkeys for the BonjourLauncher spoon",
+    "module": "BonjourLauncher",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Hides the BonjourLauncher chooser window and clears any active service queries.",
+    "module": "BonjourLauncher",
+    "name": "hide",
+    "type": "Method"
+  },
+  {
+    "desc": "Shows the BonjourLauncher chooser window and begins queries for the currently selected service type.",
+    "module": "BonjourLauncher",
+    "name": "show",
+    "type": "Method"
+  },
+  {
+    "desc": "Readys the chooser interface for the BonjourLauncher spoon",
+    "module": "BonjourLauncher",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Removes the chooser interface for the NonjourLauncher spoon and any lingering service queries",
+    "module": "BonjourLauncher",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggles the visibility of the BonjourLauncher chooser window.",
+    "module": "BonjourLauncher",
+    "name": "toggle",
+    "type": "Method"
+  },
+  {
+    "desc": "Sample recipes for various service types that you can use with the BonjourLauncher spoon.",
+    "name": "BonjourLauncher.recipes",
+    "type": "Module"
+  },
+  {
+    "desc": "Display computers and servers advertising AppleShare file server services advertised with the `_afpovertcp._tcp.` service type. This was the default with earlier versions of MacOS and is still used by Apple AirPort and Time Machine file servers.",
+    "module": "BonjourLauncher.recipes",
+    "name": "AFP",
+    "type": "Variable"
+  },
+  {
+    "desc": "Display computers and servers advertising Windows or Samba file server services advertised with the `_smb._tcp.` service type. Most Apple Macintosh computers and Laptops will also advertise file sharing with this service type.",
+    "module": "BonjourLauncher.recipes",
+    "name": "SMB",
+    "type": "Variable"
+  },
+  {
+    "desc": "Display computers and servers advertising Secure Shell services advertised with the `_ssh._tcp.` service type. This is advertised by MacOS machines with Remote Login enabled in the Sharing panel of System Preferences.",
+    "module": "BonjourLauncher.recipes",
+    "name": "SSH",
+    "type": "Variable"
+  },
+  {
+    "desc": "Display computers and servers advertising screen sharing or VNC services advertised with the `_rfb._tcp.` service type. This is advertised by MacOS machines with Screen Sharing enabled in the Sharing panel of System Preferences.",
+    "module": "BonjourLauncher.recipes",
+    "name": "VNC",
+    "type": "Variable"
+  },
+  {
+    "desc": "Display computers and servers advertising screen sharing or VNC services advertised with the `_rfb._tcp.` service type. This is advertised by MacOS machines with Screen Sharing enabled in the Sharing panel of System Preferences.",
+    "module": "BonjourLauncher.recipes",
+    "name": "VNC_RealVNC_Alternate",
+    "type": "Variable"
+  },
+  {
+    "desc": "Display pop-up with Homebrew Formula info, or open their URL",
+    "name": "BrewInfo",
+    "type": "Module"
+  },
+  {
+    "desc": "An integer specifying how long the alerts generated by BrewInfo will stay onscreen",
+    "module": "BrewInfo",
+    "name": "brew_info_delay_sec",
+    "type": "Variable"
+  },
+  {
+    "desc": "A table in conformance with the [hs.alert.defaultStyle](http://www.hammerspoon.org/docs/hs.alert.html#defaultStyle[]) format that specifies the style used by the alerts. Default value: `{ textFont = \"Courier New\", textSize = 14, radius = 10 }`",
+    "module": "BrewInfo",
+    "name": "brew_info_style",
+    "type": "Variable"
+  },
+  {
+    "desc": "If `true`, and no text is currently selected in the terminal, issue a double-click to select the text below the cursor, and use that as the input to `brew info`. See also `BrewInfo.select_text_modifiers`. Defaults to `true`.",
+    "module": "BrewInfo",
+    "name": "select_text_if_needed",
+    "type": "Variable"
+  },
+  {
+    "desc": "Table containing the modifiers to be used together with a double-click when `BrewInfo.select_text_if_needed` is true. Defaults to `{cmd = true, shift = true}` to issue a Cmd-Shift-double-click, which will select a continuous non-space string in Terminal and iTerm2.",
+    "module": "BrewInfo",
+    "name": "select_text_modifiers",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for BrewInfo",
+    "module": "BrewInfo",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Opens the homepage for package `pkg`, as obtained from the `homepage` field in `brew <subcommand> cat <pkg>`",
+    "module": "BrewInfo",
+    "name": "openBrewURL",
+    "type": "Method"
+  },
+  {
+    "desc": "Opens the homepage for the currently-selected package, as obtained from the `homepage` field in `brew <subcommand> cat <pkg>`",
+    "module": "BrewInfo",
+    "name": "openBrewURLCurSel",
+    "type": "Method"
+  },
+  {
+    "desc": "Displays an alert with the output of `brew <subcommand> info <pkg>`",
+    "module": "BrewInfo",
+    "name": "showBrewInfo",
+    "type": "Method"
+  },
+  {
+    "desc": "Display `brew <subcommand> info` using the selected text as the package name",
+    "module": "BrewInfo",
+    "name": "showBrewInfoCurSel",
+    "type": "Method"
+  },
+  {
+    "desc": "Prevent the screen from going to sleep",
+    "name": "Caffeine",
+    "type": "Module"
+  },
+  {
+    "desc": "Binds hotkeys for Caffeine",
+    "module": "Caffeine",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Sets whether or not caffeination should be enabled",
+    "module": "Caffeine",
+    "name": "setState",
+    "type": "Method"
+  },
+  {
+    "desc": "Starts Caffeine",
+    "module": "Caffeine",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops Caffeine",
+    "module": "Caffeine",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "A calendar inset into the desktop",
+    "name": "Calendar",
+    "type": "Module"
+  },
+  {
+    "desc": "Cherry tomato (a tiny Pomodoro) -- a Pomodoro Timer for the menubar",
+    "name": "Cherry",
+    "type": "Module"
+  },
+  {
+    "desc": "Binds hotkeys for Cherry",
+    "module": "Cherry",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Popup an alert or notification when time is up.",
+    "module": "Cherry",
+    "name": "popup",
+    "type": "Method"
+  },
+  {
+    "desc": "Starts the timer and displays the countdown in a menubar item",
+    "module": "Cherry",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "A circleclock inset into the desktop",
+    "name": "CircleClock",
+    "type": "Module"
+  },
+  {
+    "desc": "Keep a history of the clipboard for text entries and manage the entries with a context menu",
+    "name": "ClipboardTool",
+    "type": "Module"
+  },
+  {
+    "desc": "Whether to remove duplicates from the list, keeping only the latest one. Defaults to `true`.",
+    "module": "ClipboardTool",
+    "name": "deduplicate",
+    "type": "Variable"
+  },
+  {
+    "desc": "Speed in seconds to check for clipboard changes. If you check too frequently, you will degrade performance, if you check sparsely you will loose copies. Defaults to 0.8.",
+    "module": "ClipboardTool",
+    "name": "frequency",
+    "type": "Variable"
+  },
+  {
+    "desc": "How many items to keep on history. Defaults to 100",
+    "module": "ClipboardTool",
+    "name": "hist_size",
+    "type": "Variable"
+  },
+  {
+    "desc": "If `true`, check the data identifiers set in the pasteboard and ignore entries which match those listed in `ClipboardTool.ignoredIdentifiers`. The list of identifiers comes from http://nspasteboard.org. Defaults to `true`",
+    "module": "ClipboardTool",
+    "name": "honor_ignoredidentifiers",
+    "type": "Variable"
+  },
+  {
+    "desc": "Types of clipboard entries to ignore, see http://nspasteboard.org. Code from https://github.com/asmagill/hammerspoon-config/blob/master/utils/_menus/newClipper.lua. Default value (don't modify unless you know what you are doing):",
+    "module": "ClipboardTool",
+    "name": "ignoredIdentifiers",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "ClipboardTool",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "maximum size of a text entry",
+    "module": "ClipboardTool",
+    "name": "max_entry_size",
+    "type": "Variable"
+  },
+  {
+    "desc": "Whether to check the maximum size of an entry. Defaults to `false`.",
+    "module": "ClipboardTool",
+    "name": "max_size",
+    "type": "Variable"
+  },
+  {
+    "desc": "String to show in the menubar if `ClipboardTool.show_in_menubar` is `true`. Defaults to `\"\\u{1f4cb}\"`, which is the [Unicode clipboard character](https://codepoints.net/U+1F4CB)",
+    "module": "ClipboardTool",
+    "name": "menubar_title",
+    "type": "Variable"
+  },
+  {
+    "desc": "Whether to auto-type the item when selecting it from the menu. Can be toggled on the fly from the chooser. Defaults to `false`.",
+    "module": "ClipboardTool",
+    "name": "paste_on_select",
+    "type": "Variable"
+  },
+  {
+    "desc": "If `true`, show an alert when a new item is added to the history, i.e. has been copied.",
+    "module": "ClipboardTool",
+    "name": "show_copied_alert",
+    "type": "Variable"
+  },
+  {
+    "desc": "Whether to show a menubar item to open the clipboard history. Defaults to `true`",
+    "module": "ClipboardTool",
+    "name": "show_in_menubar",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for ClipboardTool",
+    "module": "ClipboardTool",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "If the pasteboard has changed, we add the current item to our history and update the counter",
+    "module": "ClipboardTool",
+    "name": "checkAndStorePasteboard",
+    "type": "Method"
+  },
+  {
+    "desc": "Clears the clipboard and history",
+    "module": "ClipboardTool",
+    "name": "clearAll",
+    "type": "Method"
+  },
+  {
+    "desc": "Clears the last added to the history",
+    "module": "ClipboardTool",
+    "name": "clearLastItem",
+    "type": "Method"
+  },
+  {
+    "desc": "Add the given string to the history",
+    "module": "ClipboardTool",
+    "name": "pasteboardToClipboard",
+    "type": "Method"
+  },
+  {
+    "desc": "Verify whether the pasteboard contents matches one of the values in `ClipboardTool.ignoredIdentifiers`",
+    "module": "ClipboardTool",
+    "name": "shouldBeStored",
+    "type": "Method"
+  },
+  {
+    "desc": "Display the current clipboard list in a chooser",
+    "module": "ClipboardTool",
+    "name": "showClipboard",
+    "type": "Method"
+  },
+  {
+    "desc": "Start the clipboard history collector",
+    "module": "ClipboardTool",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Show/hide the clipboard list, depending on its current state",
+    "module": "ClipboardTool",
+    "name": "toggleClipboard",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggle the value of `ClipboardTool.paste_on_select`",
+    "module": "ClipboardTool",
+    "name": "togglePasteOnSelect",
+    "type": "Method"
+  },
+  {
+    "desc": "Show the content of system clipboard",
+    "name": "ClipShow",
+    "type": "Module"
+  },
+  {
+    "desc": "Open content of the clipboard in default browser with specific refstr.",
+    "module": "ClipShow",
+    "name": "openInBrowserWithRef",
+    "type": "Method"
+  },
+  {
+    "desc": "Open local file with specific command.",
+    "module": "ClipShow",
+    "name": "openWithCommand",
+    "type": "Method"
+  },
+  {
+    "desc": "Restore the lastsession of system clipboard",
+    "module": "ClipShow",
+    "name": "restoreLastSession",
+    "type": "Method"
+  },
+  {
+    "desc": "Save content of current canvas to a file, the default location is `~/Desktop/`.",
+    "module": "ClipShow",
+    "name": "saveToFile",
+    "type": "Method"
+  },
+  {
+    "desc": "Save clipboard session so we can restore it later",
+    "module": "ClipShow",
+    "name": "saveToSession",
+    "type": "Method"
+  },
+  {
+    "desc": "Process the content of system clipboard and show/hide the canvas",
+    "module": "ClipShow",
+    "name": "toggleShow",
+    "type": "Method"
+  },
+  {
+    "desc": "Show a color sample/picker",
+    "name": "ColorPicker",
+    "type": "Module"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "ColorPicker",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Title to show in the menubar if `show_in_menubar` is true. Defaults to `\"\\u{1F308}\"`, which is the [Rainbow Emoji](http://emojipedia.org/rainbow/)",
+    "module": "ColorPicker",
+    "name": "menubar_title",
+    "type": "Variable"
+  },
+  {
+    "desc": "If `true`, show an icon in the menubar to trigger the color picker",
+    "module": "ColorPicker",
+    "name": "show_in_menubar",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for ColorPicker",
+    "module": "ColorPicker",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggle display on the screen of a grid with all the colors in the given colortable",
+    "module": "ColorPicker",
+    "name": "toggleColorSamples",
+    "type": "Method"
+  },
+  {
+    "desc": "This spoon lets execute commands from other spoon by a chooser.",
+    "name": "Commander",
+    "type": "Module"
+  },
+  {
+    "desc": "This is the table which stores all the commands",
+    "module": "Commander",
+    "name": "commandTable",
+    "type": "Variable"
+  },
+  {
+    "desc": "If you want to switch to a layout when enabled chooser,",
+    "module": "Commander",
+    "name": "forceLayout",
+    "type": "Variable"
+  },
+  {
+    "desc": "If you want to switch to a method when enabled chooser,",
+    "module": "Commander",
+    "name": "forceMethod",
+    "type": "Variable"
+  },
+  {
+    "desc": "This list contains all the ignored function names,",
+    "module": "Commander",
+    "name": "ignoredCommandList",
+    "type": "Variable"
+  },
+  {
+    "desc": "Add a command to Commander.commandTable",
+    "module": "Commander",
+    "name": "addCommand",
+    "type": "Function"
+  },
+  {
+    "desc": "This function simply set Commander.commandTable to {}, then the next time commander chooser is called it will generate the table again.",
+    "module": "Commander",
+    "name": "resetCommandTable",
+    "type": "Function"
+  },
+  {
+    "desc": "This function shows the command chooser. Bind this to a hotkey to use commander.",
+    "module": "Commander",
+    "name": "show",
+    "type": "Function"
+  },
+  {
+    "desc": "Tiny countdown with visual indicator",
+    "name": "CountDown",
+    "type": "Module"
+  },
+  {
+    "desc": "Pause or resume the existing countdown.",
+    "module": "CountDown",
+    "name": "pauseOrResume",
+    "type": "Method"
+  },
+  {
+    "desc": "Set the progress of visual indicator to `progress`.",
+    "module": "CountDown",
+    "name": "setProgress",
+    "type": "Method"
+  },
+  {
+    "desc": "Start a countdown for `minutes` minutes immediately. Calling this method again will kill the existing countdown instance.",
+    "module": "CountDown",
+    "name": "startFor",
+    "type": "Method"
+  },
+  {
+    "desc": "Show a popup window with the translation of the currently selected text",
+    "name": "DeepLTranslate",
+    "type": "Module"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "DeepLTranslate",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "If true, the popup window will close after translated text is copied to pasteboard. Defaults to `true`",
+    "module": "DeepLTranslate",
+    "name": "popup_close_after_copy",
+    "type": "Variable"
+  },
+  {
+    "desc": "If true, pressing ESC on the popup window will close it. Defaults to `true`",
+    "module": "DeepLTranslate",
+    "name": "popup_close_on_escape",
+    "type": "Variable"
+  },
+  {
+    "desc": "`hs.geometry` object representing the size to use for the translation popup window. Defaults to `hs.geometry.size(770, 610)`.",
+    "module": "DeepLTranslate",
+    "name": "popup_size",
+    "type": "Variable"
+  },
+  {
+    "desc": "Value representing the window style to be used for the translation popup window. This value needs to be a valid argument to [`hs.webview.setStyle()`](http://www.hammerspoon.org/docs/hs.webview.html#windowStyle) (i.e. a combination of values from [`hs.webview.windowMasks`](http://www.hammerspoon.org/docs/hs.webview.html#windowMasks[]). Default value: `hs.webview.windowMasks.utility|hs.webview.windowMasks.HUD|hs.webview.windowMasks.titled|hs.webview.windowMasks.closable`",
+    "module": "DeepLTranslate",
+    "name": "popup_style",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for DeepLTranslate",
+    "module": "DeepLTranslate",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Display a translation popup with the translation of the given text",
+    "module": "DeepLTranslate",
+    "name": "translatePopup",
+    "type": "Method"
+  },
+  {
+    "desc": "Get the current selected text in the frontmost window and display a translation popup with the translation between the specified languages",
+    "module": "DeepLTranslate",
+    "name": "translateSelectionPopup",
+    "type": "Method"
+  },
+  {
+    "desc": "A much-needed eject menu for your Mac menu bar. Allows ejecting",
+    "name": "EjectMenu",
+    "type": "Module"
+  },
+  {
+    "desc": "Boolean, whether to eject volumes when the laptop lid is closed",
+    "module": "EjectMenu",
+    "name": "eject_on_lid_close",
+    "type": "Variable"
+  },
+  {
+    "desc": "Boolean, whether to eject volumes before the system goes to sleep. Default value: true",
+    "module": "EjectMenu",
+    "name": "eject_on_sleep",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "EjectMenu",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "List containing volume paths that should never be ejected. Default value: empty list",
+    "module": "EjectMenu",
+    "name": "never_eject",
+    "type": "Variable"
+  },
+  {
+    "desc": "Boolean, whether to produce a notification about the volumes that get ejected. Default value: `false`",
+    "module": "EjectMenu",
+    "name": "notify",
+    "type": "Variable"
+  },
+  {
+    "desc": "List of additional system events on which the volumes should be ejected. The",
+    "module": "EjectMenu",
+    "name": "other_eject_events",
+    "type": "Variable"
+  },
+  {
+    "desc": "Boolean, whether to show a menubar button to eject all drives. Default value: true",
+    "module": "EjectMenu",
+    "name": "show_in_menubar",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for EjectMenu",
+    "module": "EjectMenu",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Eject all volumes",
+    "module": "EjectMenu",
+    "name": "ejectVolumes",
+    "type": "Method"
+  },
+  {
+    "desc": "Determine if a volume should be ejected.",
+    "module": "EjectMenu",
+    "name": "shouldEject",
+    "type": "Method"
+  },
+  {
+    "desc": "Start the watchers for power events and screen changes, to trigger volume ejection.",
+    "module": "EjectMenu",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stop the watchers",
+    "module": "EjectMenu",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Return table of volumes to be ejected when \"Eject All\" is invoked.",
+    "module": "EjectMenu",
+    "name": "volumesToEject",
+    "type": "Method"
+  },
+  {
+    "desc": "Let users choose emojis by name/keyword",
+    "name": "Emojis",
+    "type": "Module"
+  },
+  {
+    "desc": "Binds hotkeys for Emojis",
+    "module": "Emojis",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Add some missing hotkeys for opening a note in Evernote, and for common tag sets",
+    "name": "EvernoteOpenAndTag",
+    "type": "Module"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "EvernoteOpenAndTag",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for EvernoteOpenAndTag",
+    "module": "EvernoteOpenAndTag",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Returns `true` if Evernote is the frontmost application",
+    "module": "EvernoteOpenAndTag",
+    "name": "evernoteIsFrontmost",
+    "type": "Method"
+  },
+  {
+    "desc": "Apply the given tags to the selected Evernote notes",
+    "module": "EvernoteOpenAndTag",
+    "name": "inlineTagCurrentNote",
+    "type": "Method"
+  },
+  {
+    "desc": "Open the current Evernote note in a new window and apply the given tags to it",
+    "module": "EvernoteOpenAndTag",
+    "name": "openAndTagCurrentNote",
+    "type": "Method"
+  },
+  {
+    "desc": "Open the currently-selected Evernote notes in new windows.",
+    "module": "EvernoteOpenAndTag",
+    "name": "openCurrentNoteInWindow",
+    "type": "Method"
+  },
+  {
+    "desc": "Assigns tags to the currently-selected Evernote notes",
+    "module": "EvernoteOpenAndTag",
+    "name": "tagCurrentNote",
+    "type": "Method"
+  },
+  {
+    "desc": "Show a fading-and-zooming image in the center of the screen",
+    "name": "FadeLogo",
+    "type": "Module"
+  },
+  {
+    "desc": "Number of seconds over which to fade in the image. Defaults to 0.3.",
+    "module": "FadeLogo",
+    "name": "fade_in_time",
+    "type": "Variable"
+  },
+  {
+    "desc": "Number of seconds over which to fade out the image. Defaults to 0.5.",
+    "module": "FadeLogo",
+    "name": "fade_out_time",
+    "type": "Variable"
+  },
+  {
+    "desc": "Image to display. Must be an `hs.image` object. Defaults to `hs.image.imageFromName(hs.image.systemImageNames.ApplicationIcon)` (the Hammerspoon app icon)",
+    "module": "FadeLogo",
+    "name": "image",
+    "type": "Variable"
+  },
+  {
+    "desc": "Initial transparency of the image. Defaults to 1.0.",
+    "module": "FadeLogo",
+    "name": "image_alpha",
+    "type": "Variable"
+  },
+  {
+    "desc": "`hs.geometry` object specifying the initial size of the image to display in the center of the screen. The image object will be resizes proportionally to fit in this size. Defaults to `hs.geometry.size(w=200, h=200)`",
+    "module": "FadeLogo",
+    "name": "image_size",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "FadeLogo",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Number of seconds to leave the image on the screen when `start()` is called.",
+    "module": "FadeLogo",
+    "name": "run_time",
+    "type": "Variable"
+  },
+  {
+    "desc": "Do zoom-and-fade if `true`, otherwise do a regular fade",
+    "module": "FadeLogo",
+    "name": "zoom",
+    "type": "Variable"
+  },
+  {
+    "desc": "Factor by which to scale the image at every iteration during the zoom-and-fade. Defaults to 1.1.",
+    "module": "FadeLogo",
+    "name": "zoom_scale_factor",
+    "type": "Variable"
+  },
+  {
+    "desc": "Seconds between the zooming iterations",
+    "module": "FadeLogo",
+    "name": "zoom_scale_timer",
+    "type": "Variable"
+  },
+  {
+    "desc": "Hide and delete the canvas",
+    "module": "FadeLogo",
+    "name": "delete",
+    "type": "Method"
+  },
+  {
+    "desc": "Hide the image without zoom, fading it out over `fade_out_time` seconds",
+    "module": "FadeLogo",
+    "name": "hide",
+    "type": "Method"
+  },
+  {
+    "desc": "Display the image, fading it in over `fade_in_time` seconds",
+    "module": "FadeLogo",
+    "name": "show",
+    "type": "Method"
+  },
+  {
+    "desc": "Show the image, wait `run_time` seconds, and then zoom-and-fade it out.",
+    "module": "FadeLogo",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Zoom-and-fade the image over `fade_out_time` seconds",
+    "module": "FadeLogo",
+    "name": "zoom_and_fade",
+    "type": "Method"
+  },
+  {
+    "desc": "Use Fn + `h/l/j/k` as arrow keys, `y/u/i/o` as mouse wheel, `,/.` as left/right click.",
+    "name": "FnMate",
+    "type": "Module"
+  },
+  {
+    "desc": "A horizonal calendar inset into the desktop",
+    "name": "HCalendar",
+    "type": "Module"
+  },
+  {
+    "desc": "Control whether or not progress through the month is shown.",
+    "module": "HCalendar",
+    "name": "showProgress",
+    "type": "Variable"
+  },
+  {
+    "desc": "Create the calendar canvas",
+    "module": "HCalendar",
+    "name": "createCanvas",
+    "type": "Method"
+  },
+  {
+    "desc": "Initializes the spoon",
+    "module": "HCalendar",
+    "name": "init",
+    "type": "Method"
+  },
+  {
+    "desc": "Start HCalendar timer and show the canvas",
+    "module": "HCalendar",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stop HCalendar timer and hide the canvas",
+    "module": "HCalendar",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Play/pause music players when headphones are connected/disconnected",
+    "name": "HeadphoneAutoPause",
+    "type": "Module"
+  },
+  {
+    "desc": "Boolean value indicating if music should be automatically resumed when headphones are plugged in again. Only works if music was automatically paused when headphones were unplugged.",
+    "module": "HeadphoneAutoPause",
+    "name": "autoResume",
+    "type": "Variable"
+  },
+  {
+    "desc": "Table containing one key per application, with the value indicating whether HeadphoneAutoPause should try to pause/unpause that application in response to the headphone being plugged/unplugged. The key name must ideally correspond to the name of the corresponding `hs.*` module. Default value:",
+    "module": "HeadphoneAutoPause",
+    "name": "control",
+    "type": "Variable"
+  },
+  {
+    "desc": "Table containing control functions for each application to control.",
+    "module": "HeadphoneAutoPause",
+    "name": "controlfns",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "HeadphoneAutoPause",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Callback function to use as an audio device watcher, to pause/unpause the application on headphones plugged/unplugged",
+    "module": "HeadphoneAutoPause",
+    "name": "audiodevwatch",
+    "type": "Method"
+  },
+  {
+    "desc": "Generate the most common set of application control definition.",
+    "module": "HeadphoneAutoPause",
+    "name": "defaultControlFns",
+    "type": "Method"
+  },
+  {
+    "desc": "Start headphone detection on all audio devices that support it",
+    "module": "HeadphoneAutoPause",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stop headphone detection",
+    "module": "HeadphoneAutoPause",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Override High Sierra behaviour and send all media keys (play/prev/next) to iTunes",
+    "name": "HighSierraiTunesMediaFix",
+    "type": "Module"
+  },
+  {
+    "desc": "Starts the hs.eventtap that powers this Spoon",
+    "module": "HighSierraiTunesMediaFix",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops the hs.eventtap that powers this Spoon",
+    "module": "HighSierraiTunesMediaFix",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Instead of pressing ⌘Q, hold ⌘Q to close applications.",
+    "name": "HoldToQuit",
+    "type": "Module"
+  },
+  {
+    "desc": "Default hotkey mapping",
+    "module": "HoldToQuit",
+    "name": "defaultHotkey",
+    "type": "Variable"
+  },
+  {
+    "desc": "Integer containing the duration (in seconds) how long to hold",
+    "module": "HoldToQuit",
+    "name": "duration",
+    "type": "Variable"
+  },
+  {
+    "desc": "Hotkey object",
+    "module": "HoldToQuit",
+    "name": "hotkeyQbj",
+    "type": "Variable"
+  },
+  {
+    "desc": "Timer for counting the holding time",
+    "module": "HoldToQuit",
+    "name": "timer",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for HoldToQuit",
+    "module": "HoldToQuit",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Initialize spoon",
+    "module": "HoldToQuit",
+    "name": "init",
+    "type": "Method"
+  },
+  {
+    "desc": "Kill the frontmost application",
+    "module": "HoldToQuit",
+    "name": "killCurrentApp",
+    "type": "Method"
+  },
+  {
+    "desc": "Start timer on keyDown",
+    "module": "HoldToQuit",
+    "name": "onKeyDown",
+    "type": "Method"
+  },
+  {
+    "desc": "Stop Timer & show alert message",
+    "module": "HoldToQuit",
+    "name": "onKeyUp",
+    "type": "Method"
+  },
+  {
+    "desc": "Start HoldToQuit with default hotkey",
+    "module": "HoldToQuit",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Disable HoldToQuit hotkey",
+    "module": "HoldToQuit",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Communicate with [aria2](https://github.com/aria2/aria2), an interactive panel included.",
+    "name": "HSaria2",
+    "type": "Module"
+  },
+  {
+    "desc": "How many items should be created on aria2 panel? Defaults to 5.",
+    "module": "HSaria2",
+    "name": "max_items",
+    "type": "Variable"
+  },
+  {
+    "desc": "How often should HSaria2 retrieve data from RPC server? Defaults to 1 (second).",
+    "module": "HSaria2",
+    "name": "refresh_interval",
+    "type": "Variable"
+  },
+  {
+    "desc": "Try connect to `hostaddr` with `secret`. If succeed, they will become default values for following-up oprations.",
+    "module": "HSaria2",
+    "name": "connectToHost",
+    "type": "Method"
+  },
+  {
+    "desc": "Create new regular/bt/metalink task, and send notification when done.",
+    "module": "HSaria2",
+    "name": "newTask",
+    "type": "Method"
+  },
+  {
+    "desc": "Send a command to `hostaddr`, only limited commands are supported.",
+    "module": "HSaria2",
+    "name": "sendCommand",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggle the display of aria2 panel. The panel allows users to interact with aria2, add new tasks, pause them, or remove, purge … etc.",
+    "module": "HSaria2",
+    "name": "togglePanel",
+    "type": "Method"
+  },
+  {
+    "desc": "Hammerspoon Search",
+    "name": "HSearch",
+    "type": "Module"
+  },
+  {
+    "desc": "Load new sources from `HSearch.search_path`, the search_path defaults to `~/.hammerspoon/private/hsearch_dir` and the HSearch Spoon directory. Only useful for debugging purposes.",
+    "module": "HSearch",
+    "name": "loadSources",
+    "type": "Method"
+  },
+  {
+    "desc": "Trigger new source according to `hs.chooser`'s query string and keyword. Only useful for debugging purposes.",
+    "module": "HSearch",
+    "name": "switchSource",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggle the display of HSearch",
+    "module": "HSearch",
+    "name": "toggleShow",
+    "type": "Method"
+  },
+  {
+    "desc": "Display Keybindings registered with bindHotkeys() and Spoons ",
+    "name": "HSKeybindings",
+    "type": "Module"
+  },
+  {
+    "desc": "Hide the cheatsheet webview",
+    "module": "HSKeybindings",
+    "name": "hide",
+    "type": "Method"
+  },
+  {
+    "desc": "Show current application's keybindings in a webview",
+    "module": "HSKeybindings",
+    "name": "show",
+    "type": "Method"
+  },
+  {
+    "desc": "Get and Add items from Keychain. Provides no hotkeys and maintains no state",
+    "name": "Keychain",
+    "type": "Module"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "Keychain",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Add generic password to keychain.",
+    "module": "Keychain",
+    "name": "addItem",
+    "type": "Method"
+  },
+  {
+    "desc": "Retrieve an item from the Login Keychain. Return nil if not found and",
+    "module": "Keychain",
+    "name": "getItem",
+    "type": "Method"
+  },
+  {
+    "desc": "Retrieve an item from the Login Keychain, returns nil if not found.",
+    "module": "Keychain",
+    "name": "login_keychain",
+    "type": "Method"
+  },
+  {
+    "desc": "Keybindings cheatsheet for current application",
+    "name": "KSheet",
+    "type": "Module"
+  },
+  {
+    "desc": "Binds hotkeys for KSheet",
+    "module": "KSheet",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Hide the cheatsheet view.",
+    "module": "KSheet",
+    "name": "hide",
+    "type": "Method"
+  },
+  {
+    "desc": "Initialize the spoon",
+    "module": "KSheet",
+    "name": "init",
+    "type": "Method"
+  },
+  {
+    "desc": "Show current application's keybindings in a view.",
+    "module": "KSheet",
+    "name": "show",
+    "type": "Method"
+  },
+  {
+    "desc": "Alternatively show/hide the cheatsheet view.",
+    "module": "KSheet",
+    "name": "toggle",
+    "type": "Method"
+  },
+  {
+    "desc": "Spoon to track and notify about Leanpub builds.",
+    "name": "Leanpub",
+    "type": "Module"
+  },
+  {
+    "desc": "String containing the key to use for Leanpub API requests. Get it",
+    "module": "Leanpub",
+    "name": "api_key",
+    "type": "Variable"
+  },
+  {
+    "desc": "Boolean that specifies whether all your books are being synced to",
+    "module": "Leanpub",
+    "name": "books_sync_to_dropbox",
+    "type": "Variable"
+  },
+  {
+    "desc": "Integer containing the interval (in seconds) at which the book",
+    "module": "Leanpub",
+    "name": "check_interval",
+    "type": "Variable"
+  },
+  {
+    "desc": "String containing the base Dropbox path to which the books are",
+    "module": "Leanpub",
+    "name": "dropbox_path",
+    "type": "Variable"
+  },
+  {
+    "desc": "String containing the name of the Dropbox account type to use for",
+    "module": "Leanpub",
+    "name": "dropbox_type",
+    "type": "Variable"
+  },
+  {
+    "desc": "Boolean indicating whether we should try to fetch book covers from",
+    "module": "Leanpub",
+    "name": "fetch_leanpub_covers",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the",
+    "module": "Leanpub",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Table specifying the Leanpub status for which notifications should",
+    "module": "Leanpub",
+    "name": "persistent_notification",
+    "type": "Variable"
+  },
+  {
+    "desc": "List of books to watch (by default an empty list). Each element of",
+    "module": "Leanpub",
+    "name": "watch_books",
+    "type": "Variable"
+  },
+  {
+    "desc": "Check and display (if needed) the status of all the books in `watch_books`",
+    "module": "Leanpub",
+    "name": "displayAllBookStatus",
+    "type": "Method"
+  },
+  {
+    "desc": "Display a notification with the current build status of a book.",
+    "module": "Leanpub",
+    "name": "displayBookStatus",
+    "type": "Method"
+  },
+  {
+    "desc": "Fetch the cover of a book.",
+    "module": "Leanpub",
+    "name": "fetchBookCover",
+    "type": "Method"
+  },
+  {
+    "desc": "Asynchronously get the status of a book given its slug.",
+    "module": "Leanpub",
+    "name": "getBookStatus",
+    "type": "Method"
+  },
+  {
+    "desc": "Start periodic check for book status, checking every",
+    "module": "Leanpub",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops periodic check for book status, if enabled.",
+    "module": "Leanpub",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Show a popup window with the currently selected word in lexicon, notes, online help",
+    "name": "LookupSelection",
+    "type": "Module"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "LookupSelection",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for LookupSelection",
+    "module": "LookupSelection",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Get the current selected text in the frontmost window and display a translation popup with the translation between the specified languages",
+    "module": "LookupSelection",
+    "name": "openLexicon",
+    "type": "Method"
+  },
+  {
+    "desc": "Color the menubar according to the current keyboard layout",
+    "name": "MenubarFlag",
+    "type": "Module"
+  },
+  {
+    "desc": "Boolean to specify whether the indicators should be shown on all monitors or just the current one. Defaults to `true`",
+    "module": "MenubarFlag",
+    "name": "allScreens",
+    "type": "Variable"
+  },
+  {
+    "desc": "Table that contains the configuration of indicator colors",
+    "module": "MenubarFlag",
+    "name": "colors",
+    "type": "Variable"
+  },
+  {
+    "desc": "Number to specify the indicator transparency (0.0 - invisible; 1.0 - fully opaque). Defaults to 0.3",
+    "module": "MenubarFlag",
+    "name": "indicatorAlpha",
+    "type": "Variable"
+  },
+  {
+    "desc": "Number to specify the height of the indicator. Specify 0.0-1.0 to specify a percentage of the height of the menu bar, larger values indicate a fixed height in pixels. Defaults to 1.0",
+    "module": "MenubarFlag",
+    "name": "indicatorHeight",
+    "type": "Variable"
+  },
+  {
+    "desc": "Boolean to specify whether the indicator should be shown in all spaces (this includes full-screen mode). Defaults to `true`",
+    "module": "MenubarFlag",
+    "name": "indicatorInAllSpaces",
+    "type": "Variable"
+  },
+  {
+    "desc": "Number to indicate how frequently (in seconds) should the menubar indicator be updated. Defaults to 1.0.",
+    "module": "MenubarFlag",
+    "name": "timerFreq",
+    "type": "Variable"
+  },
+  {
+    "desc": "Draw the indicators corresponding to the given layout name",
+    "module": "MenubarFlag",
+    "name": "drawIndicators",
+    "type": "Method"
+  },
+  {
+    "desc": "Draw indicators for the current keyboard method or layout",
+    "module": "MenubarFlag",
+    "name": "getLayoutAndDrawindicators",
+    "type": "Method"
+  },
+  {
+    "desc": "Start the keyboard layout watcher to draw the menubar indicators.",
+    "module": "MenubarFlag",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Remove indicators and stop the keyboard layout watcher",
+    "module": "MenubarFlag",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Microphone Mute Toggle and status indicator",
+    "name": "MicMute",
+    "type": "Module"
+  },
+  {
+    "desc": "Binds hotkeys for MicMute",
+    "module": "MicMute",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggle mic mute on/off",
+    "module": "MicMute",
+    "name": "toggleMicMute",
+    "type": "Method"
+  },
+  {
+    "desc": "With this script you will be able to move the window in halves and in corners using your keyboard and mainly using arrows. You would also be able to resize them by thirds, quarters, or halves.",
+    "name": "MiroWindowsManager",
+    "type": "Module"
+  },
+  {
+    "desc": "The sizes that the window can have in full-screen. ",
+    "module": "MiroWindowsManager",
+    "name": "fullScreenSizes",
+    "type": "Variable"
+  },
+  {
+    "desc": "The screen's size using `hs.grid.setGrid()`",
+    "module": "MiroWindowsManager",
+    "name": "GRID",
+    "type": "Variable"
+  },
+  {
+    "desc": "The sizes that the window can have. ",
+    "module": "MiroWindowsManager",
+    "name": "sizes",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for Miro's Windows Manager",
+    "module": "MiroWindowsManager",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Modal keybindings environment management. Just an wrapper of `hs.hotkey.modal`.",
+    "name": "ModalMgr",
+    "type": "Module"
+  },
+  {
+    "desc": "Activate all modal environment in `idList`.",
+    "module": "ModalMgr",
+    "name": "activate",
+    "type": "Method"
+  },
+  {
+    "desc": "Deactivate modal environments in `idList`.",
+    "module": "ModalMgr",
+    "name": "deactivate",
+    "type": "Method"
+  },
+  {
+    "desc": "Deactivate all active modal environments.",
+    "module": "ModalMgr",
+    "name": "deactivateAll",
+    "type": "Method"
+  },
+  {
+    "desc": "Create a new modal keybindings environment",
+    "module": "ModalMgr",
+    "name": "new",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggle the cheatsheet display of current modal environments's keybindings.",
+    "module": "ModalMgr",
+    "name": "toggleCheatsheet",
+    "type": "Method"
+  },
+  {
+    "desc": "Displays a list of mounted volumes and a pie chart for each indicating free space on the desktop",
+    "name": "MountedVolumes",
+    "type": "Module"
+  },
+  {
+    "desc": "A table, as defined in `hs.drawing.color`, specifying the color of the volume lists border. Defaults to `{ alpha = .5 }`",
+    "module": "MountedVolumes",
+    "name": "backgroundBorder",
+    "type": "Variable"
+  },
+  {
+    "desc": "A table, as defined in `hs.drawing.color`, specifying the color of the volume lists background. Defaults to `{ alpha = .7, white = .5 }`",
+    "module": "MountedVolumes",
+    "name": "backgroundColor",
+    "type": "Variable"
+  },
+  {
+    "desc": "A table, as defined in `hs.drawing.color`, specifying the color to use for the in use portion of the volume's capacity pie chart. Defaults to `hs.drawing.color.x11.orangered`",
+    "module": "MountedVolumes",
+    "name": "capacityColor",
+    "type": "Variable"
+  },
+  {
+    "desc": "A number, default 120, specifying how often in seconds the free space on mounted volumes should be polled for current usage data.",
+    "module": "MountedVolumes",
+    "name": "checkInterval",
+    "type": "Variable"
+  },
+  {
+    "desc": "A number, default 5, specifying how rounded the corners of the volume list background should be.",
+    "module": "MountedVolumes",
+    "name": "cornerRadius",
+    "type": "Variable"
+  },
+  {
+    "desc": "A boolean, default true, indicating whether the eject button displayed next to removable volumes is enabled.",
+    "module": "MountedVolumes",
+    "name": "enableEjectButton",
+    "type": "Variable"
+  },
+  {
+    "desc": "A table, as defined in `hs.drawing.color`, specifying the color to use for the free portion of the volume's capacity pie chart. Defaults to `hs.drawing.color.x11.mediumspringgreen`",
+    "module": "MountedVolumes",
+    "name": "freeColor",
+    "type": "Variable"
+  },
+  {
+    "desc": "A boolean, default true, indicating whether the displayed list grows downwards or upwards as more volumes are mounted.",
+    "module": "MountedVolumes",
+    "name": "growsDownwards",
+    "type": "Variable"
+  },
+  {
+    "desc": "A table specifying the location on the screen of the starting corner of the display. Defaults to `{ x = 20, y = 22 }`.",
+    "module": "MountedVolumes",
+    "name": "location",
+    "type": "Variable"
+  },
+  {
+    "desc": "A table specifying the style as defined in `hs.styledtext` to display the volume name and usage details with. Defaults to:",
+    "module": "MountedVolumes",
+    "name": "textStyle",
+    "type": "Variable"
+  },
+  {
+    "desc": "Boolean, default false, indicating whether capacity is displayed in SI units (1 GB = 10^9 bytes) or Gibibytes (1 GiB = 2^30 bytes).",
+    "module": "MountedVolumes",
+    "name": "unitsInSI",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for MountedVolumes",
+    "module": "MountedVolumes",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Hide the volumes panel on the background and stop watching for volume changes",
+    "module": "MountedVolumes",
+    "name": "hide",
+    "type": "Method"
+  },
+  {
+    "desc": "Display the volumes panel on the background and update it as volumes are mounted and unmounted.",
+    "module": "MountedVolumes",
+    "name": "show",
+    "type": "Method"
+  },
+  {
+    "desc": "Draws a circle around the mouse pointer when a hotkey is pressed",
+    "name": "MouseCircle",
+    "type": "Module"
+  },
+  {
+    "desc": "An `hs.drawing.color` table defining the colour of the circle. Defaults to red.",
+    "module": "MouseCircle",
+    "name": "color",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for MouseCircle",
+    "module": "MouseCircle",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Draws a circle around the mouse",
+    "module": "MouseCircle",
+    "name": "show",
+    "type": "Method"
+  },
+  {
+    "desc": "Set the mouse pointer to the center of the focused window whenever focus changes.",
+    "name": "MouseFollowsFocus",
+    "type": "Module"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "MouseFollowsFocus",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Configures the spoon.  There is currently nothing to configure.",
+    "module": "MouseFollowsFocus",
+    "name": "configure",
+    "type": "Method"
+  },
+  {
+    "desc": "Starts updating the mouse position when window focus changes",
+    "module": "MouseFollowsFocus",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops updating the mouse position when window focus changes",
+    "module": "MouseFollowsFocus",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Moves the mouse to the center of the given window unless it's already inside the window",
+    "module": "MouseFollowsFocus",
+    "name": "updateMouse",
+    "type": "Method"
+  },
+  {
+    "desc": "Move window to the space to the right or left",
+    "name": "MoveSpaces",
+    "type": "Module"
+  },
+  {
+    "desc": "Override macOS behaviour and send all media keys (play/prev/next) to Music.app",
+    "name": "MusicAppMediaFix",
+    "type": "Module"
+  },
+  {
+    "desc": "Starts the hs.eventtap that powers this Spoon",
+    "module": "MusicAppMediaFix",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops the hs.eventtap that powers this Spoon",
+    "module": "MusicAppMediaFix",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Generate a password and copy to the clipboard.",
+    "name": "PasswordGenerator",
+    "type": "Module"
+  },
+  {
+    "desc": "Explicit function used to generate passwords, if nil style is used instead.",
+    "module": "PasswordGenerator",
+    "name": "password_generator_function",
+    "type": "Variable"
+  },
+  {
+    "desc": "Length of generated passwords. Is ignored by style xkcd.",
+    "module": "PasswordGenerator",
+    "name": "password_length",
+    "type": "Variable"
+  },
+  {
+    "desc": "Style for the generated password.",
+    "module": "PasswordGenerator",
+    "name": "password_style",
+    "type": "Variable"
+  },
+  {
+    "desc": "Number of words in generated passwords. Used by xkcd.",
+    "module": "PasswordGenerator",
+    "name": "word_count",
+    "type": "Variable"
+  },
+  {
+    "desc": "Which word number will have its word `733t` transformed.",
+    "module": "PasswordGenerator",
+    "name": "word_leet",
+    "type": "Variable"
+  },
+  {
+    "desc": "String of separators to use between words.",
+    "module": "PasswordGenerator",
+    "name": "word_separators",
+    "type": "Variable"
+  },
+  {
+    "desc": "Number of words to uppercase the first letter.",
+    "module": "PasswordGenerator",
+    "name": "word_uppercase",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for PasswordGenerator",
+    "module": "PasswordGenerator",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Generates a password and copies to clipboard",
+    "module": "PasswordGenerator",
+    "name": "copyPassword",
+    "type": "Method"
+  },
+  {
+    "desc": "Generates a password and types it",
+    "module": "PasswordGenerator",
+    "name": "pastePassword",
+    "type": "Method"
+  },
+  {
+    "desc": "Send clipboard contents to Pastebin",
+    "name": "Pastebin",
+    "type": "Module"
+  },
+  {
+    "desc": "String api developer key. Can be found [here](http://pastebin.com/api)",
+    "module": "Pastebin",
+    "name": "api_dev_key",
+    "type": "Variable"
+  },
+  {
+    "desc": "String api user key. Can be generated [here](http://pastebin.com/api/api_user_key.html)",
+    "module": "Pastebin",
+    "name": "api_user_key",
+    "type": "Variable"
+  },
+  {
+    "desc": "String indicating how long until the paste expires. Default is 'N' (Never)",
+    "module": "Pastebin",
+    "name": "expire",
+    "type": "Variable"
+  },
+  {
+    "desc": "String indicating the format of the paste. Default is 'text' (plain text). ",
+    "module": "Pastebin",
+    "name": "format",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "Pastebin",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Integer indicating whether a paste should be public, unlisted, or private. Default is 0 (public). (0=public, 1=unlisted, 2=private)",
+    "module": "Pastebin",
+    "name": "private",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for Pastebin",
+    "module": "Pastebin",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Pastes an item to Pastebin using the Pastebin api",
+    "module": "Pastebin",
+    "name": "paste",
+    "type": "Method"
+  },
+  {
+    "desc": "Connect, disconnect, or toggle connection to/from a personal hotspot. Optionally kills/opens a list of apps on connect/disconnect respectively.",
+    "name": "PersonalHotspot",
+    "type": "Module"
+  },
+  {
+    "desc": "A list of strings representing applications to kill/open, when `PersonalHotspot:connect()` and `PersonalHotspot:disconnect()` are called respectively.",
+    "module": "PersonalHotspot",
+    "name": "appsToKill",
+    "type": "Variable"
+  },
+  {
+    "desc": "The name of the personal hotspot you want to connect/disconnect from, e.g., \"John Appleseed’s iPhone\".",
+    "module": "PersonalHotspot",
+    "name": "hotspotName",
+    "type": "Variable"
+  },
+  {
+    "desc": "The number of seconds to wait for personal hotspot to appear in Wi-Fi menu before attempting to connect/disconnect. Default is 3 seconds.",
+    "module": "PersonalHotspot",
+    "name": "timeout",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkey mappings for this spoon.",
+    "module": "PersonalHotspot",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Tries to connect to the personal hotspot named in `PersonalHotspot.hotspotName`. If `PersonalHotspot.hotspotName` is `nil`, the first hotspot in the Wi-Fi menu will be selected, and `PersonalHotspot.hotspotName` will be assigned to the name of that hotspot. Once connected to the hotspot, the applications specified in `PersonalHotspot.appsToKill` are killed.",
+    "module": "PersonalHotspot",
+    "name": "connect",
+    "type": "Method"
+  },
+  {
+    "desc": "If currently connected to the personal hotspot named in `PersonalHotspot.hotspotName`, this method will disconnect from that hotspot and open the applications specified in `PersonalHostspot.appsToKill`.",
+    "module": "PersonalHotspot",
+    "name": "disconnect",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggles personal hotspot connection.",
+    "module": "PersonalHotspot",
+    "name": "toggle",
+    "type": "Method"
+  },
+  {
+    "desc": "Show a popup window with the translation of the currently selected (or other) text",
+    "name": "PopupTranslateSelection",
+    "type": "Module"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "PopupTranslateSelection",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "If true, pressing ESC on the popup window will close it. Defaults to `true`",
+    "module": "PopupTranslateSelection",
+    "name": "popup_close_on_escape",
+    "type": "Variable"
+  },
+  {
+    "desc": "`hs.geometry` object representing the size to use for the translation popup window. Defaults to `hs.geometry.size(770, 610)`.",
+    "module": "PopupTranslateSelection",
+    "name": "popup_size",
+    "type": "Variable"
+  },
+  {
+    "desc": "Value representing the window style to be used for the translation popup window. This value needs to be a valid argument to [`hs.webview.setStyle()`](http://www.hammerspoon.org/docs/hs.webview.html#windowStyle) (i.e. a combination of values from [`hs.webview.windowMasks`](http://www.hammerspoon.org/docs/hs.webview.html#windowMasks[]). Default value: `hs.webview.windowMasks.utility|hs.webview.windowMasks.HUD|hs.webview.windowMasks.titled|hs.webview.windowMasks.closable`",
+    "module": "PopupTranslateSelection",
+    "name": "popup_style",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for PopupTranslateSelection",
+    "module": "PopupTranslateSelection",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Display a translation popup with the translation of the given text between the specified languages",
+    "module": "PopupTranslateSelection",
+    "name": "translatePopup",
+    "type": "Method"
+  },
+  {
+    "desc": "Get the current selected text in the frontmost window and display a translation popup with the translation between the specified languages",
+    "module": "PopupTranslateSelection",
+    "name": "translateSelectionPopup",
+    "type": "Method"
+  },
+  {
+    "desc": "Implements push-to-talk and push-to-mute functionality with `fn` key.",
+    "name": "PushToTalk",
+    "type": "Module"
+  },
+  {
+    "desc": "Takes mapping from application name to mic state.",
+    "module": "PushToTalk",
+    "name": "app_switcher",
+    "type": "Variable"
+  },
+  {
+    "desc": "Check running applications when starting PushToTalk.",
+    "module": "PushToTalk",
+    "name": "detect_on_start",
+    "type": "Variable"
+  },
+  {
+    "desc": "Starts menu and key watcher",
+    "module": "PushToTalk",
+    "name": "init",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops PushToTalk",
+    "module": "PushToTalk",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Cycle states in order",
+    "module": "PushToTalk",
+    "name": "toggleStates",
+    "type": "Method"
+  },
+  {
+    "desc": "A spoon that let you bind sequential bindings.",
+    "name": "RecursiveBinder",
+    "type": "Module"
+  },
+  {
+    "desc": "key to abort, default to {keyNone, 'escape'}",
+    "module": "RecursiveBinder",
+    "name": "escapeKey",
+    "type": "Variable"
+  },
+  {
+    "desc": "Number of entries each line of helper. Default to 5.",
+    "module": "RecursiveBinder",
+    "name": "helperEntryEachLine",
+    "type": "Variable"
+  },
+  {
+    "desc": "Length of each entry in char. Default to 20.",
+    "module": "RecursiveBinder",
+    "name": "helperEntryLengthInChar",
+    "type": "Variable"
+  },
+  {
+    "desc": "format of helper, the helper is just a hs.alert",
+    "module": "RecursiveBinder",
+    "name": "helperFormat",
+    "type": "Variable"
+  },
+  {
+    "desc": "The mapping used to display modifiers on helper.",
+    "module": "RecursiveBinder",
+    "name": "helperModifierMapping",
+    "type": "Variable"
+  },
+  {
+    "desc": "whether to show helper, can be true of false",
+    "module": "RecursiveBinder",
+    "name": "showBindHelper",
+    "type": "Variable"
+  },
+  {
+    "desc": "Bind sequential keys by a nested keymap.",
+    "module": "RecursiveBinder",
+    "name": "recursiveBind",
+    "type": "Method"
+  },
+  {
+    "desc": "this function simply return a table with empty modifiers",
+    "module": "RecursiveBinder",
+    "name": "singleKey",
+    "type": "Method"
+  },
+  {
+    "desc": "Adds a hotkey to reload the hammerspoon configuration, and a pathwatcher to automatically reload on changes.",
+    "name": "ReloadConfiguration",
+    "type": "Module"
+  },
+  {
+    "desc": "List of directories to watch for changes, defaults to hs.configdir",
+    "module": "ReloadConfiguration",
+    "name": "watch_paths",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for ReloadConfiguration",
+    "module": "ReloadConfiguration",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Start ReloadConfiguration",
+    "module": "ReloadConfiguration",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Give your screens rounded corners",
+    "name": "RoundedCorners",
+    "type": "Module"
+  },
+  {
+    "desc": "Controls whether corners are drawn on all screens or just the primary screen. Defaults to true",
+    "module": "RoundedCorners",
+    "name": "allScreens",
+    "type": "Variable"
+  },
+  {
+    "desc": "Controls which level of the screens the corners are drawn at. See `hs.canvas.windowLevels` for more information. Defaults to `screenSaver + 1`",
+    "module": "RoundedCorners",
+    "name": "level",
+    "type": "Variable"
+  },
+  {
+    "desc": "Controls the radius of the rounded corners, in points. Defaults to 6",
+    "module": "RoundedCorners",
+    "name": "radius",
+    "type": "Variable"
+  },
+  {
+    "desc": "Starts RoundedCorners",
+    "module": "RoundedCorners",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops RoundedCorners",
+    "module": "RoundedCorners",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Pluggable launch bar",
+    "name": "Seal",
+    "type": "Module"
+  },
+  {
+    "desc": "List of directories where Seal will look for plugins. Defaults to `~/.hammerspoon/seal_plugins/` and the Seal Spoon directory.",
+    "module": "Seal",
+    "name": "plugin_search_paths",
+    "type": "Variable"
+  },
+  {
+    "desc": "Time between the last keystroke and the start of the recalculation of the choices to display, in seconds.",
+    "module": "Seal",
+    "name": "queryChangedTimerDuration",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for Seal",
+    "module": "Seal",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Loads a plugin from a given file",
+    "module": "Seal",
+    "name": "loadPluginFromFile",
+    "type": "Method"
+  },
+  {
+    "desc": "Loads a list of Seal plugins",
+    "module": "Seal",
+    "name": "loadPlugins",
+    "type": "Method"
+  },
+  {
+    "desc": "Refresh the list of commands provided by all the currently loaded plugins.",
+    "module": "Seal",
+    "name": "refreshAllCommands",
+    "type": "Method"
+  },
+  {
+    "desc": "Refresh the list of commands provided by the given plugin.",
+    "module": "Seal",
+    "name": "refreshCommandsForPlugin",
+    "type": "Method"
+  },
+  {
+    "desc": "Shows the Seal UI",
+    "module": "Seal",
+    "name": "show",
+    "type": "Method"
+  },
+  {
+    "desc": "Starts Seal",
+    "module": "Seal",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops Seal",
+    "module": "Seal",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Shows or hides the Seal UI",
+    "module": "Seal",
+    "name": "toggle",
+    "type": "Method"
+  },
+  {
+    "desc": "Various APIs for Seal plugins",
+    "name": "Seal.plugins",
+    "type": "Module"
+  },
+  {
+    "desc": "A plugin to add launchable apps/scripts, making Seal act as a launch bar",
+    "name": "Seal.plugins.apps",
+    "type": "Module"
+  },
+  {
+    "desc": "Table containing the paths to search for launchable items",
+    "module": "Seal.plugins.apps",
+    "name": "appSearchPaths",
+    "type": "Variable"
+  },
+  {
+    "desc": "Restarts the Spotlight app searcher",
+    "module": "Seal.plugins.apps",
+    "name": "restart",
+    "type": "Method"
+  },
+  {
+    "desc": "Starts the Spotlight app searcher",
+    "module": "Seal.plugins.apps",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops the Spotlight app searcher",
+    "module": "Seal.plugins.apps",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Visual, searchable pasteboard (ie clipboard) history",
+    "name": "Seal.plugins.pasteboard",
+    "type": "Module"
+  },
+  {
+    "desc": "",
+    "module": "Seal.plugins.pasteboard",
+    "name": "historySize",
+    "type": "Variable"
+  },
+  {
+    "desc": "",
+    "module": "Seal.plugins.pasteboard",
+    "name": "saveHistory",
+    "type": "Variable"
+  },
+  {
+    "desc": "",
+    "name": "Seal.plugins.safari_bookmarks",
+    "type": "Module"
+  },
+  {
+    "desc": "If `true` (default), bookmarks are always opened with Safari, otherwise they are opened with the default application using the `/usr/bin/open` command.",
+    "module": "Seal.plugins.safari_bookmarks",
+    "name": "always_open_with_safari",
+    "type": "Variable"
+  },
+  {
+    "desc": "A plugin to capture the screen in various ways",
+    "name": "Seal.plugins.screencapture",
+    "type": "Module"
+  },
+  {
+    "desc": "Whether or not to show the screen capture UI in macOS 10.14 or later",
+    "module": "Seal.plugins.screencapture",
+    "name": "showPostUI",
+    "type": "Variable"
+  },
+  {
+    "desc": "A plugin to quickly open URLs containing a search/query term",
+    "name": "Seal.plugins.urlformats",
+    "type": "Module"
+  },
+  {
+    "desc": "Gets or sets the current providers table",
+    "module": "Seal.plugins.urlformats",
+    "name": "providersTable",
+    "type": "Method"
+  },
+  {
+    "desc": "Allow accessing user-defined bookmarks and arbitrary actions from Seal.",
+    "name": "Seal.plugins.useractions",
+    "type": "Module"
+  },
+  {
+    "desc": "",
+    "module": "Seal.plugins.useractions",
+    "name": "actions",
+    "type": "Variable"
+  },
+  {
+    "desc": "",
+    "module": "Seal.plugins.useractions",
+    "name": "get_favicon",
+    "type": "Variable"
+  },
+  {
+    "desc": "Handles \"send current item to OmniFocus\" for multiple applications",
+    "name": "SendToOmniFocus",
+    "type": "Module"
+  },
+  {
+    "desc": "Table containing application handlers for sending the current item to OmniFocus.",
+    "module": "SendToOmniFocus",
+    "name": "actions",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "SendToOmniFocus",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Boolean to control Hammerspoon-generated notifications when filing items (doest not control AppleScript notifications, if any, generated from within the scripts). Defaults to `true`.",
+    "module": "SendToOmniFocus",
+    "name": "notifications",
+    "type": "Variable"
+  },
+  {
+    "desc": "Whether to display the new tasks in the OmniFocus quick-entry dialog before adding them. Defaults to `true` (set to `false` to send directly to the Inbox, without prompting)",
+    "module": "SendToOmniFocus",
+    "name": "quickentrydialog",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for SendToOmniFocus",
+    "module": "SendToOmniFocus",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Register a new application handler",
+    "module": "SendToOmniFocus",
+    "name": "registerApplication",
+    "type": "Method"
+  },
+  {
+    "desc": "Send current item in current application to OmniFocus by triggering the appropriate handler.",
+    "module": "SendToOmniFocus",
+    "name": "sendCurrentItem",
+    "type": "Method"
+  },
+  {
+    "desc": "Creates a semitransparent overlay to reduce screen brightness.",
+    "name": "Shade",
+    "type": "Module"
+  },
+  {
+    "desc": "Flag for Shade status, 'false' means shade off, 'true' means on.",
+    "module": "Shade",
+    "name": "shadeIsOn",
+    "type": "Variable"
+  },
+  {
+    "desc": "Contains the alpha (transparency) of the overlay, from 0.0 (completely",
+    "module": "Shade",
+    "name": "shadeTransparency",
+    "type": "Variable"
+  },
+  {
+    "desc": "Turns shade on/off",
+    "module": "Shade",
+    "name": "toggleShade",
+    "type": "Function"
+  },
+  {
+    "desc": "Binds hotkeys for Shade",
+    "module": "Shade",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Sets up the Spoon",
+    "module": "Shade",
+    "name": "init",
+    "type": "Method"
+  },
+  {
+    "desc": "Turn the shade on, darkening the screen",
+    "module": "Shade",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Turn the shade off, brightening the screen",
+    "module": "Shade",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Trigger or prevent screen saver/sleep by moving your mouse pointer to specified hot corners on your screen.",
+    "name": "SleepCorners",
+    "type": "Module"
+  },
+  {
+    "desc": "Specifies the height and width in screen pixels, default 20, of the visual feedback to be displayed when the mouse pointer moves into one of the recognized hot corners",
+    "module": "SleepCorners",
+    "name": "feedbackSize",
+    "type": "Variable"
+  },
+  {
+    "desc": "A table, default `{ fn = true }`, specifying keyboard modifiers which if held when the mouse pointer enters the sleep now hot corner will trigger sleep immediately rather then delay for [SleepCorners.sleepDelay](#sleepDelay) seconds.",
+    "module": "SleepCorners",
+    "name": "immediateSleepModifiers",
+    "type": "Variable"
+  },
+  {
+    "desc": "Specifies whether the sleep now corner, when the modifiers defined for [SleepCorners.immediateSleepModifiers](#immediateSleepModifiers) are also held, should trigger the display sleep or lock the users session. Defaults to true.",
+    "module": "SleepCorners",
+    "name": "immediateSleepShouldLock",
+    "type": "Variable"
+  },
+  {
+    "desc": "Specifies the location of the never sleep corner on the screen. Defaults to \"LR\".",
+    "module": "SleepCorners",
+    "name": "neverSleepCorner",
+    "type": "Variable"
+  },
+  {
+    "desc": "A table, default `{ fn = true }`, specifying keyboard modifiers which if held when the mouse pointer enters the never sleep hot corner will disable display sleep and leave it disabled even if the mouse pointer leaves the hot corner. While the never sleep lock is in effect the never sleep visual feedback will remain visible in the appropriate corner of the screen. The never sleep lock may is unlocked when you move the mouse pointer back into the never sleep corner with the modifiers held down a second time or move the mouse pointer into the sleep now corner.",
+    "module": "SleepCorners",
+    "name": "neverSleepLockModifiers",
+    "type": "Variable"
+  },
+  {
+    "desc": "Specifies which action should be preferred if both the sleep now and never sleep hot corners are assigned to the same location on the screen. The default is false.",
+    "module": "SleepCorners",
+    "name": "preferSleepNow",
+    "type": "Variable"
+  },
+  {
+    "desc": "Specifies the number of seconds, default 2, the mouse pointer must remain within the trigger area of the sleep now corner in order to put the system's display to sleep.",
+    "module": "SleepCorners",
+    "name": "sleepDelay",
+    "type": "Variable"
+  },
+  {
+    "desc": "Specifies the location of the sleep now corner on the screen. Defaults to \"LL\".",
+    "module": "SleepCorners",
+    "name": "sleepNowCorner",
+    "type": "Variable"
+  },
+  {
+    "desc": "Specifies whether the sleep now corner should trigger the display sleep or lock the users session. Defaults to false.",
+    "module": "SleepCorners",
+    "name": "sleepNowShouldLock",
+    "type": "Variable"
+  },
+  {
+    "desc": "Specifies the screen on which the sleep corners are made active. Defaults to the value returned by `hs.screen.primaryScreen()`.",
+    "module": "SleepCorners",
+    "name": "sleepScreen",
+    "type": "Variable"
+  },
+  {
+    "desc": "Specifies the height and width in screen pixels, default 2, of the trigger area for the recognized hot corners.",
+    "module": "SleepCorners",
+    "name": "triggerSize",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for SleepCorners",
+    "module": "SleepCorners",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Returns whether or not the sleep corners are currently active",
+    "module": "SleepCorners",
+    "name": "isActive",
+    "type": "Method"
+  },
+  {
+    "desc": "Temporarily show the SleepCorner feedback images in their current locations as a reminder of their positions on the screen.",
+    "module": "SleepCorners",
+    "name": "show",
+    "type": "Method"
+  },
+  {
+    "desc": "Starts monitoring the defined sleep corners to allow triggering or preventing the system display  sleep state.",
+    "module": "SleepCorners",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stop monitoring the defined sleep corners.",
+    "module": "SleepCorners",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggles or sets whether or not SleepCorners is currently monitoring the defined screen corners for managing the system display's sleep state and displays an alert indicating the new state of the SleepCorners spoon.",
+    "module": "SleepCorners",
+    "name": "toggle",
+    "type": "Method"
+  },
+  {
+    "desc": "Menubar netspeed meter",
+    "name": "SpeedMenu",
+    "type": "Module"
+  },
+  {
+    "desc": "Redetect the active interface, darkmode …And redraw everything.",
+    "module": "SpeedMenu",
+    "name": "rescan",
+    "type": "Method"
+  },
+  {
+    "desc": "Install and manage Spoons and Spoon repositories",
+    "name": "SpoonInstall",
+    "type": "Module"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "SpoonInstall",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Table containing the list of available Spoon repositories. The key",
+    "module": "SpoonInstall",
+    "name": "repos",
+    "type": "Variable"
+  },
+  {
+    "desc": "If `true`, `andUse()` will update repos and install packages synchronously. Defaults to `false`.",
+    "module": "SpoonInstall",
+    "name": "use_syncinstall",
+    "type": "Variable"
+  },
+  {
+    "desc": "Declaratively install, load and configure a Spoon",
+    "module": "SpoonInstall",
+    "name": "andUse",
+    "type": "Method"
+  },
+  {
+    "desc": "Asynchronously install a Spoon from a registered repository",
+    "module": "SpoonInstall",
+    "name": "asyncInstallSpoonFromRepo",
+    "type": "Method"
+  },
+  {
+    "desc": "Asynchronously download a Spoon zip file and install it.",
+    "module": "SpoonInstall",
+    "name": "asyncInstallSpoonFromZipURL",
+    "type": "Method"
+  },
+  {
+    "desc": "Asynchronously fetch the information about the contents of all Spoon repositories registered in `SpoonInstall.repos`",
+    "module": "SpoonInstall",
+    "name": "asyncUpdateAllRepos",
+    "type": "Method"
+  },
+  {
+    "desc": "Asynchronously fetch the information about the contents of a Spoon repository",
+    "module": "SpoonInstall",
+    "name": "asyncUpdateRepo",
+    "type": "Method"
+  },
+  {
+    "desc": "Synchronously install a Spoon from a registered repository",
+    "module": "SpoonInstall",
+    "name": "installSpoonFromRepo",
+    "type": "Method"
+  },
+  {
+    "desc": "Synchronously download a Spoon zip file and install it.",
+    "module": "SpoonInstall",
+    "name": "installSpoonFromZipURL",
+    "type": "Method"
+  },
+  {
+    "desc": "Return a sorted list of registered Spoon repositories",
+    "module": "SpoonInstall",
+    "name": "repolist",
+    "type": "Method"
+  },
+  {
+    "desc": "Search repositories for a pattern",
+    "module": "SpoonInstall",
+    "name": "search",
+    "type": "Method"
+  },
+  {
+    "desc": "Synchronously fetch the information about the contents of all Spoon repositories registered in `SpoonInstall.repos`",
+    "module": "SpoonInstall",
+    "name": "updateAllRepos",
+    "type": "Method"
+  },
+  {
+    "desc": "Synchronously fetch the information about the contents of a Spoon repository",
+    "module": "SpoonInstall",
+    "name": "updateRepo",
+    "type": "Method"
+  },
+  {
+    "desc": "Keep a history of the clipboard, only for text entries",
+    "name": "TextClipboardHistory",
+    "type": "Module"
+  },
+  {
+    "desc": "Whether to remove duplicates from the list, keeping only the latest one. Defaults to `true`.",
+    "module": "TextClipboardHistory",
+    "name": "deduplicate",
+    "type": "Variable"
+  },
+  {
+    "desc": "Speed in seconds to check for clipboard changes. If you check too frequently, you will degrade performance, if you check sparsely you will loose copies. Defaults to 0.8.",
+    "module": "TextClipboardHistory",
+    "name": "frequency",
+    "type": "Variable"
+  },
+  {
+    "desc": "How many items to keep on history. Defaults to 100",
+    "module": "TextClipboardHistory",
+    "name": "hist_size",
+    "type": "Variable"
+  },
+  {
+    "desc": "If `true`, check the data identifiers set in the pasteboard and ignore entries which match those listed in `TextClipboardHistory.ignoredIdentifiers`. The list of identifiers comes from http://nspasteboard.org. Defaults to `true`",
+    "module": "TextClipboardHistory",
+    "name": "honor_ignoredidentifiers",
+    "type": "Variable"
+  },
+  {
+    "desc": "Types of clipboard entries to ignore, see http://nspasteboard.org. Code from https://github.com/asmagill/hammerspoon-config/blob/master/utils/_menus/newClipper.lua. Default value (don't modify unless you know what you are doing):",
+    "module": "TextClipboardHistory",
+    "name": "ignoredIdentifiers",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "TextClipboardHistory",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "String to show in the menubar if `TextClipboardHistory.show_in_menubar` is `true`. Defaults to `\"\\u{1f4ce}\"`, which is the [Unicode paperclip character](https://codepoints.net/U+1F4CE)",
+    "module": "TextClipboardHistory",
+    "name": "menubar_title",
+    "type": "Variable"
+  },
+  {
+    "desc": "Whether to auto-type the item when selecting it from the menu. Can be toggled on the fly from the chooser. Defaults to `false`.",
+    "module": "TextClipboardHistory",
+    "name": "paste_on_select",
+    "type": "Variable"
+  },
+  {
+    "desc": "Whether to show a menubar item to open the clipboard history. Defaults to `true`",
+    "module": "TextClipboardHistory",
+    "name": "show_in_menubar",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for TextClipboardHistory",
+    "module": "TextClipboardHistory",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "If the pasteboard has changed, we add the current item to our history and update the counter",
+    "module": "TextClipboardHistory",
+    "name": "checkAndStorePasteboard",
+    "type": "Method"
+  },
+  {
+    "desc": "Clears the clipboard and history",
+    "module": "TextClipboardHistory",
+    "name": "clearAll",
+    "type": "Method"
+  },
+  {
+    "desc": "Clears the last added to the history",
+    "module": "TextClipboardHistory",
+    "name": "clearLastItem",
+    "type": "Method"
+  },
+  {
+    "desc": "Add the given string to the history",
+    "module": "TextClipboardHistory",
+    "name": "pasteboardToClipboard",
+    "type": "Method"
+  },
+  {
+    "desc": "Verify whether the pasteboard contents matches one of the values in `TextClipboardHistory.ignoredIdentifiers`",
+    "module": "TextClipboardHistory",
+    "name": "shouldBeStored",
+    "type": "Method"
+  },
+  {
+    "desc": "Display the current clipboard list in a chooser",
+    "module": "TextClipboardHistory",
+    "name": "showClipboard",
+    "type": "Method"
+  },
+  {
+    "desc": "Start the clipboard history collector",
+    "module": "TextClipboardHistory",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Show/hide the clipboard list, depending on its current state",
+    "module": "TextClipboardHistory",
+    "name": "toggleClipboard",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggle the value of `TextClipboardHistory.paste_on_select`",
+    "module": "TextClipboardHistory",
+    "name": "togglePasteOnSelect",
+    "type": "Method"
+  },
+  {
+    "desc": "A widget showing time flown in one year.",
+    "name": "TimeFlow",
+    "type": "Module"
+  },
+  {
+    "desc": "Show Time Machine backup progress in a menubar indicator.",
+    "name": "TimeMachineProgress",
+    "type": "Module"
+  },
+  {
+    "desc": "",
+    "module": "TimeMachineProgress",
+    "name": "backupIcon",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "TimeMachineProgress",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Integer specifying how often the indicator should be refreshed. Defaults to 5 seconds.",
+    "module": "TimeMachineProgress",
+    "name": "refresh_interval",
+    "type": "Variable"
+  },
+  {
+    "desc": "Update the indicator and menu according to the current backup status.",
+    "module": "TimeMachineProgress",
+    "name": "refresh",
+    "type": "Method"
+  },
+  {
+    "desc": "Starts the indicator",
+    "module": "TimeMachineProgress",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops the indicator",
+    "module": "TimeMachineProgress",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggle rotation on external screens",
+    "name": "ToggleScreenRotation",
+    "type": "Module"
+  },
+  {
+    "desc": "Two-element table containing the rotation angles for \"normal\" and \"rotated\". Defaults to `{ 0, 90 }` and should only be changed if you really know what you are doing.",
+    "module": "ToggleScreenRotation",
+    "name": "rotating_angles",
+    "type": "Variable"
+  },
+  {
+    "desc": "Lua patterns for screens that shouldn't be rotated, even if they match one of the patterns.",
+    "module": "ToggleScreenRotation",
+    "name": "screens_to_skip",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for ToggleScreenRotation.",
+    "module": "ToggleScreenRotation",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Provide keybindings for muting/unmuting Skype or Skype for Business",
+    "name": "ToggleSkypeMute",
+    "type": "Module"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "ToggleSkypeMute",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "If `true`, produce notifications when Skype is muted/unmuted. Defaults to `true`.",
+    "module": "ToggleSkypeMute",
+    "name": "notifications",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for ToggleSkypeMute",
+    "module": "ToggleSkypeMute",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggle Skype between muted/unmuted, whether it is focused or not",
+    "module": "ToggleSkypeMute",
+    "name": "toggle",
+    "type": "Method"
+  },
+  {
+    "desc": "generate google authenticator token value keystrokes",
+    "name": "Token",
+    "type": "Module"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "Token",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "String indicating the Keychain name of the Shared Key used in the OTP HMAC-SHA1 generation",
+    "module": "Token",
+    "name": "secret_key",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for Token",
+    "module": "Token",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Retrieves the token using an HOTP/TOTP Secret Key stored in the keychain",
+    "module": "Token",
+    "name": "get_token",
+    "type": "Method"
+  },
+  {
+    "desc": "read a token secret key from keychain, generate a code and make keystrokes for it",
+    "module": "Token",
+    "name": "token_keystroke",
+    "type": "Method"
+  },
+  {
+    "desc": "connect to a Tunnelblick OpenVPN connection using a shortcut",
+    "name": "Tunnelblick",
+    "type": "Module"
+  },
+  {
+    "desc": "String connection name",
+    "module": "Tunnelblick",
+    "name": "connection_name",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "Tunnelblick",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Function returning the password to login to the vpn connection with",
+    "module": "Tunnelblick",
+    "name": "password_fn",
+    "type": "Variable"
+  },
+  {
+    "desc": "String username to log in with",
+    "module": "Tunnelblick",
+    "name": "username",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for Tunnelblick",
+    "module": "Tunnelblick",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Performs the connection operation using a username, password, and connection_name",
+    "module": "Tunnelblick",
+    "name": "connect",
+    "type": "Method"
+  },
+  {
+    "desc": "A spoon to load/unload the Turbo Boost Disable kernel extension",
+    "name": "TurboBoost",
+    "type": "Module"
+  },
+  {
+    "desc": "Command to execute to check whether the DisableTurboBoost kernel",
+    "module": "TurboBoost",
+    "name": "check_kext_cmd",
+    "type": "Variable"
+  },
+  {
+    "desc": "Boolean to indicate whether Turbo Boost should be disabled when",
+    "module": "TurboBoost",
+    "name": "disable_on_start",
+    "type": "Variable"
+  },
+  {
+    "desc": "Where to find the icon to use for the \"Disabled\" icon. Default value",
+    "module": "TurboBoost",
+    "name": "disabled_icon_path",
+    "type": "Variable"
+  },
+  {
+    "desc": "Where to find the icon to use for the \"Enabled\" icon. Default value",
+    "module": "TurboBoost",
+    "name": "enabled_icon_path",
+    "type": "Variable"
+  },
+  {
+    "desc": "Where the DisableTurboBoost.kext file is located.",
+    "module": "TurboBoost",
+    "name": "kext_path",
+    "type": "Variable"
+  },
+  {
+    "desc": "List with paths to check for the DisableTurboBoost.kext file. The first one",
+    "module": "TurboBoost",
+    "name": "kext_paths",
+    "type": "Variable"
+  },
+  {
+    "desc": "Command to execute to load the DisableTurboBoost kernel",
+    "module": "TurboBoost",
+    "name": "load_kext_cmd",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "TurboBoost",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Boolean indicating whether notifications should be generated when",
+    "module": "TurboBoost",
+    "name": "notify",
+    "type": "Variable"
+  },
+  {
+    "desc": "Boolean to indicate whether Turbo Boost should be reenabled when",
+    "module": "TurboBoost",
+    "name": "reenable_on_stop",
+    "type": "Variable"
+  },
+  {
+    "desc": "Command to execute to unload the DisableTurboBoost kernel",
+    "module": "TurboBoost",
+    "name": "unload_kext_cmd",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for TurboBoost",
+    "module": "TurboBoost",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Sets whether Turbo Boost should be disabled (kernel extension",
+    "module": "TurboBoost",
+    "name": "setState",
+    "type": "Method"
+  },
+  {
+    "desc": "Starts TurboBoost",
+    "module": "TurboBoost",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Check whether Turbo Boost is enabled",
+    "module": "TurboBoost",
+    "name": "status",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops TurboBoost",
+    "module": "TurboBoost",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggle TurboBoost status",
+    "module": "TurboBoost",
+    "name": "toggle",
+    "type": "Method"
+  },
+  {
+    "desc": "Handle \"archive current item\" for multiple applications using the same hotkey",
+    "name": "UniversalArchive",
+    "type": "Module"
+  },
+  {
+    "desc": "Boolean indicating whether a notification should be produced when an item is archived. Defaults to \"true\".",
+    "module": "UniversalArchive",
+    "name": "archive_notifications",
+    "type": "Variable"
+  },
+  {
+    "desc": "Name of the Notebook to use for archiving in Evernote. Defaults to \"Archive\"",
+    "module": "UniversalArchive",
+    "name": "evernote_archive_notebook",
+    "type": "Variable"
+  },
+  {
+    "desc": "In Evernote, archive is done by selectin \"Move note\" and then",
+    "module": "UniversalArchive",
+    "name": "evernote_delay_before_typing",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "UniversalArchive",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Name of the mailbox to use for archiving in Outlook. You must move a message manually to that mailbox at least once so that it appears in the \"Message\" -> \"Move...\" submenu. Defaults to \"Archive\"",
+    "module": "UniversalArchive",
+    "name": "outlook_archive_folder",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for UniversalArchive",
+    "module": "UniversalArchive",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Archive current note in Evernote.",
+    "module": "UniversalArchive",
+    "name": "evernoteArchive",
+    "type": "Method"
+  },
+  {
+    "desc": "Archive current message in Mail using the built-in Archive functionality",
+    "module": "UniversalArchive",
+    "name": "mailArchive",
+    "type": "Method"
+  },
+  {
+    "desc": "Archive current message in Outlook using one of two methods:",
+    "module": "UniversalArchive",
+    "name": "outlookArchive",
+    "type": "Method"
+  },
+  {
+    "desc": "Register a handler function for an application.",
+    "module": "UniversalArchive",
+    "name": "registerApplication",
+    "type": "Method"
+  },
+  {
+    "desc": "Archive current message in Spark using the built-in Archive functionality",
+    "module": "UniversalArchive",
+    "name": "sparkArchive",
+    "type": "Method"
+  },
+  {
+    "desc": "Main entry point for archiving an item. If a handler function is",
+    "module": "UniversalArchive",
+    "name": "universalArchive",
+    "type": "Method"
+  },
+  {
+    "desc": "Automatically sets a random Unsplash image as your wallpaper daily.",
+    "name": "UnsplashRandom",
+    "type": "Module"
+  },
+  {
+    "desc": "Use unsplash images as wallpaper",
+    "name": "UnsplashZ",
+    "type": "Module"
+  },
+  {
+    "desc": "Route URLs to different applications with pattern matching",
+    "name": "URLDispatcher",
+    "type": "Module"
+  },
+  {
+    "desc": "If true, handle Slack-redir URLs to apply the rule on the destination URL. Defaults to `true`",
+    "module": "URLDispatcher",
+    "name": "decode_slack_redir_urls",
+    "type": "Variable"
+  },
+  {
+    "desc": "Bundle ID for default URL handler. (Defaults to `\"com.apple.Safari\"`)",
+    "module": "URLDispatcher",
+    "name": "default_handler",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "URLDispatcher",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "If true, URLDispatcher set itself as system handler for http requests. Defaults to `true`",
+    "module": "URLDispatcher",
+    "name": "set_system_handler",
+    "type": "Variable"
+  },
+  {
+    "desc": "URL dispatch rules.",
+    "module": "URLDispatcher",
+    "name": "url_patterns",
+    "type": "Variable"
+  },
+  {
+    "desc": "List containing optional additional redirection decoders (other",
+    "module": "URLDispatcher",
+    "name": "url_redir_decoders",
+    "type": "Variable"
+  },
+  {
+    "desc": "Dispatch a URL to an application according to the defined `url_patterns`.",
+    "module": "URLDispatcher",
+    "name": "dispatchURL",
+    "type": "Method"
+  },
+  {
+    "desc": "Start dispatching URLs according to the rules",
+    "module": "URLDispatcher",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Open/close apps or run an arbitrary function when a USB device is connected/disconnected.",
+    "name": "USBDeviceActions",
+    "type": "Module"
+  },
+  {
+    "desc": "A table where the keys should correspond to `productName`s of USB devices and the values should be tables containing the keys `apps` and/or `fn`. (You can find the `productName` for a connected USB device using `hs.usb.attachedDevices()`).",
+    "module": "USBDeviceActions",
+    "name": "devices",
+    "type": "Variable"
+  },
+  {
+    "desc": "Creates an `hs.usb.watcher` with a callback that will execute the specified actions for the USB devices in `USBDeviceActions.devices` when they are connected/disconnected, but doesn't start the watcher.",
+    "module": "USBDeviceActions",
+    "name": "init",
+    "type": "Method"
+  },
+  {
+    "desc": "Starts the `hs.usb.watcher` created by `USBDeviceActions:init()`.",
+    "module": "USBDeviceActions",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops the `hs.usb.watcher` created by `USBDeviceActions:init()`.",
+    "module": "USBDeviceActions",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Use mouse scroll wheel and modifiers to adjust volume.",
+    "name": "VolumeScroll",
+    "type": "Module"
+  },
+  {
+    "desc": "Initialize spoon",
+    "module": "VolumeScroll",
+    "name": "init",
+    "type": "Method"
+  },
+  {
+    "desc": "Determine if a table of modifiers are the same modifiers passed into :start()",
+    "module": "VolumeScroll",
+    "name": "sameMods",
+    "type": "Method"
+  },
+  {
+    "desc": "Start event watcher.",
+    "module": "VolumeScroll",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stop the scroll watcher",
+    "module": "VolumeScroll",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Determine the number of items in a table",
+    "module": "VolumeScroll",
+    "name": "tableLength",
+    "type": "Method"
+  },
+  {
+    "desc": "Receive notifications every time your wifi network changes.",
+    "name": "WifiNotifier",
+    "type": "Module"
+  },
+  {
+    "desc": "Initialize the WifiNotifier spoon",
+    "module": "WifiNotifier",
+    "name": "init",
+    "type": "Method"
+  },
+  {
+    "desc": "Fires whenever the wifiWatcher detects an SSID change.",
+    "module": "WifiNotifier",
+    "name": "ssidChangedCallback",
+    "type": "Method"
+  },
+  {
+    "desc": "Starts the wifiNotifier",
+    "module": "WifiNotifier",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Allow arbitrary actions when transitioning between SSIDs",
+    "name": "WiFiTransitions",
+    "type": "Module"
+  },
+  {
+    "desc": "Table containing a list of actions to execute for SSID transitions. Transitions to a \"no network\" state (`nil` SSID) are ignored unless you set `WiFiTransitions.actOnNilTransitions`. Each action is itself a table with the following keys:",
+    "module": "WiFiTransitions",
+    "name": "actions",
+    "type": "Variable"
+  },
+  {
+    "desc": "Whether to evaluate `WiFiTransitions.actions` if the \"to\" network is no network (`nil`). Defaults to `false` to maintain backward compatibility; if unset, note that `from` transitions may not execute as expected.",
+    "module": "WiFiTransitions",
+    "name": "actOnNilTransitions",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "WiFiTransitions",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Process the rules and execute any actions corresponding to the specified transition.",
+    "module": "WiFiTransitions",
+    "name": "processTransition",
+    "type": "Method"
+  },
+  {
+    "desc": "Start the WiFi watcher",
+    "module": "WiFiTransitions",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Configure and assign hotkey for `hs.grid`",
+    "name": "WindowGrid",
+    "type": "Module"
+  },
+  {
+    "desc": "Table containing a list of arguments to be passed to grid.setGrid(). Each element in the table is itself a table with 1-3 arguments as defined for [hs.grid.setGrid()](http://www.hammerspoon.org/docs/hs.grid.html#setGrid). Defaults to an empty list, which results in the default 3x3 grid for all screen from `hs.grid`.",
+    "module": "WindowGrid",
+    "name": "gridGeometries",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "WindowGrid",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for WindowGrid",
+    "module": "WindowGrid",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Sets the grid configuration according to `WindowGrid.gridGeometries`.",
+    "module": "WindowGrid",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Simple window movement and resizing, focusing on half- and third-of-screen sizes",
+    "name": "WindowHalfsAndThirds",
+    "type": "Module"
+  },
+  {
+    "desc": "We don't want our undo frame cache filling all available memory. Let's clear it after it hasn't been used for a while.",
+    "module": "WindowHalfsAndThirds",
+    "name": "clear_cache_after_seconds",
+    "type": "Variable"
+  },
+  {
+    "desc": "Table containing a sample set of hotkeys that can be",
+    "module": "WindowHalfsAndThirds",
+    "name": "defaultHotkeys",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "WindowHalfsAndThirds",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "If `true`, set [setFrameCorrectness](http://www.hammerspoon.org/docs/hs.window.html#setFrameCorrectness) for some resizing operations which fail when the window extends beyonds screen boundaries. This may cause some jerkiness in the resizing, so experiment and determine if you need it. Defaults to `false`",
+    "module": "WindowHalfsAndThirds",
+    "name": "use_frame_correctness",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for WindowHalfsAndThirds",
+    "module": "WindowHalfsAndThirds",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Center window on screen",
+    "module": "WindowHalfsAndThirds",
+    "name": "center",
+    "type": "Method"
+  },
+  {
+    "desc": "Make win larger than its current size",
+    "module": "WindowHalfsAndThirds",
+    "name": "larger",
+    "type": "Method"
+  },
+  {
+    "desc": "Resize to the left half of the screen.",
+    "module": "WindowHalfsAndThirds",
+    "name": "leftHalf",
+    "type": "Method"
+  },
+  {
+    "desc": "Make win smaller than its current size",
+    "module": "WindowHalfsAndThirds",
+    "name": "smaller",
+    "type": "Method"
+  },
+  {
+    "desc": "Toggle win between its normal size, and being maximized",
+    "module": "WindowHalfsAndThirds",
+    "name": "toggleMaximized",
+    "type": "Method"
+  },
+  {
+    "desc": "Undo window size changes for win if there've been any in WindowHalfsAndThirds.clear_cache_after_seconds",
+    "module": "WindowHalfsAndThirds",
+    "name": "undo",
+    "type": "Method"
+  },
+  {
+    "desc": "Move windows to other screens",
+    "name": "WindowScreenLeftAndRight",
+    "type": "Module"
+  },
+  {
+    "desc": "Length of the animation to use for the window movements across the",
+    "module": "WindowScreenLeftAndRight",
+    "name": "animationDuration",
+    "type": "Variable"
+  },
+  {
+    "desc": "Table containing a sample set of hotkeys that can be",
+    "module": "WindowScreenLeftAndRight",
+    "name": "defaultHotkeys",
+    "type": "Variable"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "WindowScreenLeftAndRight",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for WindowScreenLeftAndRight",
+    "module": "WindowScreenLeftAndRight",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Assign every window a sigil for quick access.",
+    "name": "WindowSigils",
+    "type": "Module"
+  },
+  {
+    "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+    "module": "WindowSigils",
+    "name": "logger",
+    "type": "Variable"
+  },
+  {
+    "desc": "Binds hotkeys for WindowSigils",
+    "module": "WindowSigils",
+    "name": "bindHotkeys",
+    "type": "Method"
+  },
+  {
+    "desc": "Bind an extra action to be triggered by a key in the sigil mode.",
+    "module": "WindowSigils",
+    "name": "bindModeKey",
+    "type": "Method"
+  },
+  {
+    "desc": "Bind an action to be triggered in the sigil mode when a window's sigil key is pressed.",
+    "module": "WindowSigils",
+    "name": "bindSigilAction",
+    "type": "Method"
+  },
+  {
+    "desc": "Configures the spoon.",
+    "module": "WindowSigils",
+    "name": "configure",
+    "type": "Method"
+  },
+  {
+    "desc": "A list of windows, in the order sigils are assigned.",
+    "module": "WindowSigils",
+    "name": "orderedWindows",
+    "type": "Method"
+  },
+  {
+    "desc": "Rerender all window sigils.",
+    "module": "WindowSigils",
+    "name": "refresh",
+    "type": "Method"
+  },
+  {
+    "desc": "Starts rendering the sigils and handling hotkeys",
+    "module": "WindowSigils",
+    "name": "start",
+    "type": "Method"
+  },
+  {
+    "desc": "Stops rendering the sigils and handling hotkeys",
+    "module": "WindowSigils",
+    "name": "stop",
+    "type": "Method"
+  },
+  {
+    "desc": "Find the window with the given index or sigil.",
+    "module": "WindowSigils",
+    "name": "window",
+    "type": "Method"
+  },
+  {
+    "desc": "Windows manipulation",
+    "name": "WinWin",
+    "type": "Module"
+  },
+  {
+    "desc": "An integer specifying how many gridparts the screen should be divided into. Defaults to 30.",
+    "module": "WinWin",
+    "name": "gridparts",
+    "type": "Variable"
+  },
+  {
+    "desc": "Center the cursor on the focused window.",
+    "module": "WinWin",
+    "name": "centerCursor",
+    "type": "Method"
+  },
+  {
+    "desc": "Move and resize the focused window.",
+    "module": "WinWin",
+    "name": "moveAndResize",
+    "type": "Method"
+  },
+  {
+    "desc": "Move the focused window between all of the screens in the `direction`.",
+    "module": "WinWin",
+    "name": "moveToScreen",
+    "type": "Method"
+  },
+  {
+    "desc": "Move the focused window in the `direction` by on step. The step scale equals to the width/height of one gridpart.",
+    "module": "WinWin",
+    "name": "stepMove",
+    "type": "Method"
+  },
+  {
+    "desc": "Resize the focused window in the `direction` by on step.",
+    "module": "WinWin",
+    "name": "stepResize",
+    "type": "Method"
+  },
+  {
+    "desc": "Undo the last window manipulation. Only those \"moveAndResize\" manipulations can be undone.",
+    "module": "WinWin",
+    "name": "undo",
+    "type": "Method"
+  }
+]

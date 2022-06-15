@@ -1,0 +1,132 @@
+[
+  {
+    "Command": [],
+    "Constant": [],
+    "Constructor": [],
+    "Deprecated": [],
+    "Field": [],
+    "Function": [],
+    "Method": [
+      {
+        "def": "ArrangeDesktop:addMenuItems",
+        "desc": "Add menu items to a table for each configured desktop arrangment.",
+        "doc": "Add menu items to a table for each configured desktop arrangment.\n\nParameters:\n* menuItems - table of menu items\n* arrangements - table of desktop arrangements\n\nReturns:\ntable of menu items",
+        "name": "addMenuItems",
+        "parameters": [
+          "* menuItems - table of menu items",
+          "* arrangements - table of desktop arrangements"
+        ],
+        "returns": [
+          "table of menu items"
+        ],
+        "signature": "ArrangeDesktop:addMenuItems",
+        "stripped_doc": "",
+        "type": "Method"
+      },
+      {
+        "def": "ArrangeDesktop:arrange",
+        "desc": "Arrange the desktop based on a given configuration",
+        "doc": "Arrange the desktop based on a given configuration\n\nParameters:\n* arrangement - table of arrangement data",
+        "name": "arrange",
+        "parameters": [
+          "* arrangement - table of arrangement data"
+        ],
+        "signature": "ArrangeDesktop:arrange",
+        "stripped_doc": "",
+        "type": "Method"
+      },
+      {
+        "def": "ArrangeDesktop:logCurrentArrangement()",
+        "desc": "Build up the configuration for the current desktop arrangement and log it to the Hammerspoon console.",
+        "doc": "Build up the configuration for the current desktop arrangement and log it to the Hammerspoon console.",
+        "name": "logCurrentArrangement",
+        "signature": "ArrangeDesktop:logCurrentArrangement()",
+        "stripped_doc": "",
+        "type": "Method"
+      }
+    ],
+    "Variable": [
+      {
+        "def": "ArrangeDesktop.arrangements",
+        "desc": "Contains the configured desktop arrangements",
+        "doc": "Contains the configured desktop arrangements",
+        "name": "arrangements",
+        "signature": "ArrangeDesktop.arrangements",
+        "stripped_doc": "",
+        "type": "Variable"
+      },
+      {
+        "def": "ArrangeDesktop.logger",
+        "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "doc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "name": "logger",
+        "signature": "ArrangeDesktop.logger",
+        "stripped_doc": "",
+        "type": "Variable"
+      }
+    ],
+    "desc": "Utilities for arranging your desktop how you like it.",
+    "doc": "Utilities for arranging your desktop how you like it.\n\nPositioning logic adapted from https://github.com/dploeger/hammerspoon-window-manager",
+    "items": [
+      {
+        "def": "ArrangeDesktop:addMenuItems",
+        "desc": "Add menu items to a table for each configured desktop arrangment.",
+        "doc": "Add menu items to a table for each configured desktop arrangment.\n\nParameters:\n* menuItems - table of menu items\n* arrangements - table of desktop arrangements\n\nReturns:\ntable of menu items",
+        "name": "addMenuItems",
+        "parameters": [
+          "* menuItems - table of menu items",
+          "* arrangements - table of desktop arrangements"
+        ],
+        "returns": [
+          "table of menu items"
+        ],
+        "signature": "ArrangeDesktop:addMenuItems",
+        "stripped_doc": "",
+        "type": "Method"
+      },
+      {
+        "def": "ArrangeDesktop:arrange",
+        "desc": "Arrange the desktop based on a given configuration",
+        "doc": "Arrange the desktop based on a given configuration\n\nParameters:\n* arrangement - table of arrangement data",
+        "name": "arrange",
+        "parameters": [
+          "* arrangement - table of arrangement data"
+        ],
+        "signature": "ArrangeDesktop:arrange",
+        "stripped_doc": "",
+        "type": "Method"
+      },
+      {
+        "def": "ArrangeDesktop.arrangements",
+        "desc": "Contains the configured desktop arrangements",
+        "doc": "Contains the configured desktop arrangements",
+        "name": "arrangements",
+        "signature": "ArrangeDesktop.arrangements",
+        "stripped_doc": "",
+        "type": "Variable"
+      },
+      {
+        "def": "ArrangeDesktop:logCurrentArrangement()",
+        "desc": "Build up the configuration for the current desktop arrangement and log it to the Hammerspoon console.",
+        "doc": "Build up the configuration for the current desktop arrangement and log it to the Hammerspoon console.",
+        "name": "logCurrentArrangement",
+        "signature": "ArrangeDesktop:logCurrentArrangement()",
+        "stripped_doc": "",
+        "type": "Method"
+      },
+      {
+        "def": "ArrangeDesktop.logger",
+        "desc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "doc": "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "name": "logger",
+        "signature": "ArrangeDesktop.logger",
+        "stripped_doc": "",
+        "type": "Variable"
+      }
+    ],
+    "name": "ArrangeDesktop",
+    "stripped_doc": "\nPositioning logic adapted from https://github.com/dploeger/hammerspoon-window-manager",
+    "submodules": [],
+    "type": "Module"
+  }
+]
