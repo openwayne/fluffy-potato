@@ -95,7 +95,7 @@ set cindent shiftwidth=4
 set autoindent shiftwidth=4
 set expandtab
 
-" 标尺相关 
+" 标尺相关
 set colorcolumn=85
 "set cursorline
 autocmd InsertLeave * se nocul
@@ -148,22 +148,22 @@ let g:EasyMotion_leader_key = ","
 "set zen coding
 let g:user_zen_settings = {
             \  'php' : {
-            \    'extends' : 'html',
-            \    'filters' : 'c',
-            \  },
-            \  'xml' : {
-            \    'extends' : 'html',
-            \  },
-            \  'axml' : {
-            \    'extends' : 'html',
-            \  },
-            \  'haml' : {
-            \    'extends' : 'html',
-            \  },
-            \  'erb' : {
-            \    'extends' : 'html',
-            \  },
-            \}
+                \    'extends' : 'html',
+                \    'filters' : 'c',
+                \  },
+                \  'xml' : {
+                    \    'extends' : 'html',
+                    \  },
+                    \  'axml' : {
+                        \    'extends' : 'html',
+                        \  },
+                        \  'haml' : {
+                            \    'extends' : 'html',
+                            \  },
+                            \  'erb' : {
+                                \    'extends' : 'html',
+                                \  },
+                                \}
 
 "set CtrlP
 if executable('ag')
@@ -201,12 +201,15 @@ au BufRead,BufNewFile *.skim set filetype=slim
 "for python
 au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent
 
+"for lua,vim
+au BufRead,BufNewFile *.lua,*vim set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent
+
 "scss,sass
 au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.sass set filetype=scss
 
-"for typescript or js or axml or acss or json
-au BufRead,BufNewFile *.tsx,*.ts,*.js,*jsx,*.axml,*.acss,*.json,*.html,*.htm set shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab autoindent
+"fort ypescript or js or axml or acss or json
+"au BufRead,BufNewFile *.tsx,*.ts,*.js,*jsx,*.axml,*.acss,*.json,*.html,*.htm set shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab autoindent
 au BufNewFile,BufRead *.wxml set filetype=html
 au BufNewFile,BufRead *.wxss set filetype=less
 au BufNewFile,BufRead *.axml set filetype=html
@@ -227,6 +230,7 @@ let g:neoformat_basic_format_retab = 1
 " Enable trimmming of trailing whitespace
 let g:neoformat_basic_format_trim = 1
 let g:neoformat_only_msg_on_error = 1
+let g:neoformat_try_node_exe = 1
 
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.axml,*.acss,*.wcss,*.wxml Neoformat
 
@@ -238,6 +242,7 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 
 " neocomplete like
 set completeopt+=noinsert
+
 " deoplete.nvim recommend
 set completeopt+=noselect
 
@@ -267,10 +272,10 @@ runtime ./maps.vim
 
 " init macos special config
 if has("unix")
-  let s:uname = system("uname -s")
-  " Do Mac stuff
-  if s:uname == "Darwin\n"
-    runtime ./macos.vim
-  endif
+    let s:uname = system("uname -s")
+    " Do Mac stuff
+    if s:uname == "Darwin\n"
+        runtime ./macos.vim
+    endif
 endif
 

@@ -34,7 +34,7 @@ map <leader>m :Neomake<CR>
 map <leader>n :nohl<CR>
 
 " open/close NERDTree
-map <leader>f :NERDTreeToggle<CR>
+map <leader><space> :NERDTreeToggle<CR>
 
 "Settings for TagBar
 map <leader>g :TagbarToggle<CR>
