@@ -60,7 +60,6 @@ Plug 'onsails/lspkind-nvim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'vim-syntastic/syntastic'
-Plug 'L3MON4D3/LuaSnip'
 " }
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
