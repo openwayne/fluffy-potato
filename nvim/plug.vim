@@ -81,5 +81,8 @@ Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'w0rp/ale' "removing unused modules and vars
 Plug 'chrisbra/NrrwRgn'
 
+" AI
+Plug 'github/copilot.vim'
+
 call plug#end()
 
