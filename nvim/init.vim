@@ -72,7 +72,7 @@ set laststatus=2
 set fenc=utf-8
 
 "set to use clipboard of system
-set clipboard=unnamed
+set clipboard+=unnamedplus
 
 " 设置文件编码检测类型及支持格式
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
@@ -278,4 +278,3 @@ if has("unix")
         runtime ./macos.vim
     endif
 endif
-
