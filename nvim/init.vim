@@ -278,3 +278,6 @@ if has("unix")
         runtime ./macos.vim
     endif
 endif
+
+" avoid bd to exit vim
+autocmd BufDelete * if len(filter(range(1,bufnr('$')), 'buflisted(v:val)')) == 0 | enew | endif
