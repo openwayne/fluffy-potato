@@ -1,49 +1,69 @@
 # fluffy-potato
 
-my terminal config.
+> Terminal config for macOS — Neovim · tmux · Hammerspoon
 
----
-
-please install `vim-plug` first.
-
-if u want format jsx, u should visit [prettier.io](https://prettier.io/docs/en/install.html) install it by `yarn global add prettier`
-
-#### tmux
-
-```
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
-
-#### Neovim
-
-###### Unix
+## Quick start
 
 ```sh
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+git clone https://github.com/yourname/fluffy-potato.git ~/code/fluffy-potato
+cd ~/code/fluffy-potato
+bash install.sh
 ```
 
-#### local config
+The script will symlink configs, install Node/Python formatter tools, and set up tpm. On first Neovim launch, **lazy.nvim auto-installs all plugins**.
 
-just link `your git path`/fluffy-potato/tmux/.tmux.conf to `~/.tmux.conf`
+## Manual setup (if you prefer)
 
 ```sh
-ln -s {your git path}/fluffy-potato/tmux/.tmux.conf ~/.tmux.conf
-ln -s {your git path}/fluffy-potato/tmux/.tmux.conf.local ~/.tmux.conf.local
-
-# if you want try nvim just append this lines to .zshrc / .bashrc
-alias vim=nvim
-alias vi=nvim
-
-ln -s {your git path}/fluffy-potato/nvim ~/.config/nvim
+ln -s ~/code/fluffy-potato/nvim           ~/.config/nvim
+ln -s ~/code/fluffy-potato/tmux/.tmux.conf       ~/.tmux.conf
+ln -s ~/code/fluffy-potato/tmux/.tmux.conf.local  ~/.tmux.conf.local
+ln -s ~/code/fluffy-potato/hammerspoon    ~/.hammerspoon
 ```
 
-#### ERROR
+## Dependencies
 
-```
-YouCompleteMe unavailable: requires Vim compiled with Python (2.6+ or 3.3+) support
-UltiSnips requires py >= 2.7 or py3
-Error: Required vim compiled with +python
-```
+| Tool | Install |
+|------|---------|
+| Neovim 0.9+ | `brew install neovim` |
+| ripgrep | `brew install ripgrep` (Telescope live grep) |
+| prettier / eslint_d | `npm i -g prettier prettier_d_slim eslint_d` |
+| black / autopep8 | `pip3 install black autopep8` (Python fmt) |
+| tpm | auto-installed by `install.sh` |
+| [Nerd Font](https://www.nerdfonts.com/) | required for icons |
 
-just install neovim form pip like this `pip install neovim`
+## Neovim
+
+After opening nvim, run `:Mason` to install LSP servers. Recommended: `ts_ls`, `eslint`, `cssls`, `jsonls`, `lua_ls`.
+
+### Key bindings
+
+| Key | Action |
+|-----|--------|
+| `<leader><space>` | File tree |
+| `;f` | Find files |
+| `;r` | Live grep |
+| `\\` | Buffers |
+| `;;` | Help tags |
+| `<leader>xx` | Diagnostics panel |
+| `K` | Hover docs |
+| `gd` | Go to definition |
+| `gh` | LSP finder |
+| `<space>rn` | Rename |
+| `<space>ca` | Code action |
+| `<C-j>` / `<S-C-j>` | Prev/next diagnostic |
+| `]c` / `[c` | Prev/next git hunk |
+| `<leader>hs` | Stage hunk |
+| `]x` / `[x` | Prev/next git conflict |
+
+## tmux
+
+After launch: `prefix + I` to install plugins.
+
+## Hammerspoon
+
+Copy and edit the example config:
+
+```sh
+cp ~/.hammerspoon/config-example.lua ~/.hammerspoon/config.lua
+```

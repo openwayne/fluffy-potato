@@ -267,3 +267,21 @@ set -g mode-keys vi
 #set -g status-position top
 #
 #
+
+# ─── Plugins ──────────────────────────────────────────────────────────────────
+
+# Auto-save sessions every 15 min (requires tmux-resurrect)
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'tmux-plugins/tmux-yank'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+
+# continuum: auto-restore last saved session on tmux start
+set -g @continuum-restore 'on'
+set -g @continuum-save-interval '15'
+
+# yank: copy to system clipboard in copy-mode
+# vi-mode: y copies, Y copies whole line
+set -g @yank_selection_mouse 'clipboard'
+
+# vim-tmux-navigator: C-hjkl to move between panes AND vim splits seamlessly
+# (no extra config needed — plugin handles key binding automatically)
