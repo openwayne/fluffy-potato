@@ -78,25 +78,20 @@ return {
     end,
   },
 
-  -- Which-key: keybinding discovery popup
+  -- Which-key: keybinding discovery popup (v3+ API)
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
     config = function()
       local wk = require("which-key")
-      wk.setup({ window = { border = "rounded" } })
-      -- Register key group prefixes
-      wk.register({
-        ["<leader>"] = {
-          x  = { name = "+trouble/diagnostics" },
-          t  = { name = "+tabs" },
-          w  = { name = "+window" },
-        },
-        ["<space>"] = {
-          w  = { name = "+workspace" },
-          r  = { name = "+rename" },
-          c  = { name = "+code" },
-        },
+      wk.setup({ win = { border = "rounded" } })
+      -- Register key group prefixes using v3 API
+      wk.add({
+        { "<leader>x", group = "trouble/diagnostics" },
+        { "<leader>t", group = "tabs" },
+        { "<leader>w", group = "window" },
+        { "<leader>h", group = "git hunks" },
+        { "<space>w",  group = "workspace" },
       })
     end,
   },

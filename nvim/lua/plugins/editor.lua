@@ -24,23 +24,21 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        highlight = { enable = true },
-        indent    = { enable = true },
-        autotag   = { enable = true },
-        ensure_installed = {
-          "tsx", "typescript", "javascript",
-          "json", "yaml", "toml",
-          "html", "css", "scss", "less",
-          "lua", "vim", "vimdoc",
-          "bash", "python", "go", "rust",
-          "fish", "php", "swift",
-        },
-      })
-      local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-      parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
-    end,
+    -- Use `main` + `opts` so lazy.nvim calls setup() after the plugin loads
+    main = "nvim-treesitter.configs",
+    opts = {
+      highlight = { enable = true },
+      indent    = { enable = true },
+      autotag   = { enable = true },
+      ensure_installed = {
+        "tsx", "typescript", "javascript",
+        "json", "yaml", "toml",
+        "html", "css", "scss", "less",
+        "lua", "vim", "vimdoc",
+        "bash", "python", "go", "rust",
+        "fish", "php", "swift",
+      },
+    },
   },
 
   -- Auto-close brackets
