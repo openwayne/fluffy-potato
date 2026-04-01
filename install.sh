@@ -119,12 +119,6 @@ echo ""
 
 FONT_CASK="font-jetbrains-mono-nerd-font"
 if command -v brew &>/dev/null; then
-  # Add homebrew/cask-fonts tap if needed
-  if ! brew tap | grep -q 'homebrew/cask-fonts' 2>/dev/null; then
-    info "Adding homebrew/cask-fonts tap..."
-    run "brew tap homebrew/cask-fonts"
-  fi
-
   if brew list --cask "$FONT_CASK" &>/dev/null 2>&1; then
     info "JetBrainsMono Nerd Font already installed"
   else
