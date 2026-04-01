@@ -112,6 +112,31 @@ else
   warn "ripgrep not found — install for Telescope live grep: brew install ripgrep"
 fi
 
+# ─── Nerd Fonts ───────────────────────────────────────────────────────────────
+echo ""
+echo "  Installing Nerd Font..."
+echo ""
+
+FONT_CASK="font-jetbrains-mono-nerd-font"
+if command -v brew &>/dev/null; then
+  # Add homebrew/cask-fonts tap if needed
+  if ! brew tap | grep -q 'homebrew/cask-fonts' 2>/dev/null; then
+    info "Adding homebrew/cask-fonts tap..."
+    run "brew tap homebrew/cask-fonts"
+  fi
+
+  if brew list --cask "$FONT_CASK" &>/dev/null 2>&1; then
+    info "JetBrainsMono Nerd Font already installed"
+  else
+    info "Installing JetBrainsMono Nerd Font..."
+    run "brew install --cask $FONT_CASK"
+    info "Font installed — set it in your terminal emulator preferences"
+  fi
+else
+  warn "Homebrew not found — install Nerd Font manually from https://www.nerdfonts.com/font-downloads"
+  warn "Recommended: JetBrainsMono Nerd Font"
+fi
+
 # ─── Python tools (optional, for Python formatting) ──────────────────────────
 echo ""
 echo "  Checking Python tools..."

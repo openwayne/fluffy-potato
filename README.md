@@ -30,7 +30,7 @@ ln -s ~/code/fluffy-potato/hammerspoon    ~/.hammerspoon
 | prettier / eslint_d | `npm i -g prettier prettier_d_slim eslint_d` |
 | black / autopep8 | `pip3 install black autopep8` (Python fmt) |
 | tpm | auto-installed by `install.sh` |
-| [Nerd Font](https://www.nerdfonts.com/) | required for icons |
+| [Nerd Font](https://www.nerdfonts.com/) | auto-installed by `install.sh` (JetBrainsMono) |
 
 ## Neovim
 
