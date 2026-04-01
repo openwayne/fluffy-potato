@@ -24,7 +24,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    -- Use `main` + `opts` so lazy.nvim calls setup() after the plugin loads
+    lazy = false,  -- must be in rtp at startup for other plugins (autotag, lspsaga)
     main = "nvim-treesitter.configs",
     opts = {
       highlight = { enable = true },
