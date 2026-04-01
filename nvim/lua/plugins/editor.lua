@@ -24,21 +24,27 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    lazy = false,  -- must be in rtp at startup for other plugins (autotag, lspsaga)
-    main = "nvim-treesitter.configs",
-    opts = {
-      highlight = { enable = true },
-      indent    = { enable = true },
-      autotag   = { enable = true },
-      ensure_installed = {
-        "tsx", "typescript", "javascript",
-        "json", "yaml", "toml",
-        "html", "css", "scss", "less",
-        "lua", "vim", "vimdoc",
-        "bash", "python", "go", "rust",
-        "fish", "php", "swift",
-      },
-    },
+    lazy = false,
+    config = function()
+      -- vim.schedule defers until after lazy has finished adding plugins to rtp
+      vim.schedule(function()
+        local ok, configs = pcall(require, "nvim-treesitter.configs")
+        if not ok then return end
+        configs.setup({
+          highlight        = { enable = true },
+          indent           = { enable = true },
+          autotag          = { enable = true },
+          ensure_installed = {
+            "tsx", "typescript", "javascript",
+            "json", "yaml", "toml",
+            "html", "css", "scss", "less",
+            "lua", "vim", "vimdoc",
+            "bash", "python", "go", "rust",
+            "fish", "php", "swift",
+          },
+        })
+      end)
+    end,
   },
 
   -- Auto-close brackets
