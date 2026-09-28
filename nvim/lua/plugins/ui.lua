@@ -74,7 +74,7 @@ return {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      require("trouble").setup({ use_diagnostic_signs = true })
+      require("trouble").setup({})
     end,
   },
 
@@ -89,9 +89,8 @@ return {
       wk.add({
         { "<leader>x", group = "trouble/diagnostics" },
         { "<leader>t", group = "tabs" },
-        { "<leader>w", group = "window" },
+        { "<leader>w", group = "window/workspace" },
         { "<leader>h", group = "git hunks" },
-        { "<space>w",  group = "workspace" },
       })
     end,
   },

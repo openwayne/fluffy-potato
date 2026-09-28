@@ -7,6 +7,8 @@ return {
   -- ALE: async linting (separate from LSP)
   {
     "dense-analysis/ale",
+    -- ESLint diagnostics already come from the native eslint LSP.
+    enabled = false,
     config = function()
       vim.g.ale_linters_explicit = 1
       vim.g.ale_linters = {

@@ -16,18 +16,21 @@ map("n", "<leader>tn", ":tabnew<CR>", opts)
 map("n", "<leader>te", ":tabedit ", { noremap = true })
 map("n", "<leader>tc", ":tabclose<CR>", opts)
 map("n", "<leader>tm", ":tabmove ", { noremap = true })
-map("n", "<leader>h", ":tabprevious<CR>", opts)
-map("n", "<leader>l", ":tabnext<CR>", opts)
+map("n", "<leader>tp", ":tabprevious<CR>", opts)
+map("n", "<leader>tl", ":tabnext<CR>", opts)
 
 -- ─── Window resize ─────────────────────────────────────────────────────────
 map("n", "w[", ":vertical resize -3<CR>", opts)
 map("n", "w]", ":vertical resize +3<CR>", opts)
 map("n", "w-", ":resize -3<CR>", opts)
 map("n", "w=", ":resize +3<CR>", opts)
-map("n", "<leader>w", "<C-W>w", opts)
+map("n", "<leader>ww", "<C-W>w", opts)
 
 -- ─── Search ────────────────────────────────────────────────────────────────
 map("n", "<leader>n", ":nohl<CR>", opts)
+map("n", "<leader>f", function()
+  require("conform").format({ async = true, lsp_format = "fallback" })
+end, opts)
 
 -- ─── File tree (nvim-tree) ─────────────────────────────────────────────────
 map("n", "<leader><space>", ":NvimTreeToggle<CR>", opts)
@@ -37,6 +40,7 @@ map("n", "<leader>g", ":TagbarToggle<CR>", opts)
 
 -- ─── Insert mode completion ────────────────────────────────────────────────
 map("i", "<C-A>", "<C-C><c-p>", opts)
+map("i", "<M-y>", 'copilot#Accept("\\<Tab>")', { expr = true, replace_keycodes = false, silent = true })
 
 -- ─── Move lines (macOS Cmd key) ────────────────────────────────────────────
 map("n", "<D-j>", "mz:m+<cr>`z", opts)
@@ -61,14 +65,14 @@ map("n", "\\\\", "<cmd>Telescope buffers<cr>", opts)
 map("n", ";;", "<cmd>Telescope help_tags<cr>", opts)
 
 -- ─── Trouble ───────────────────────────────────────────────────────────────
-map("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
-map("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
-map("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", opts)
+map("n", "<leader>xw", "<cmd>Trouble diagnostics toggle<cr>", opts)
+map("n", "<leader>xd", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", opts)
 
 -- ─── LSP (set in on_attach; defined here for reference / global binds) ─────
 -- These are registered per-buffer via the LSP on_attach in plugins/lsp.lua
 -- Global diagnostic navigation (outside of buffers with LSP)
 map("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-map("n", "<C-j>",    "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-map("n", "<S-C-j>",  "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+map("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, opts)
+map("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, opts)
 map("n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)

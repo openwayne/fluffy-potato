@@ -5,26 +5,26 @@ local autocmd = vim.api.nvim_create_autocmd
 
 -- ─── Cursor line highlight ─────────────────────────────────────────────────
 local cursor_group = augroup("CursorHighlight", { clear = true })
-autocmd("InsertLeave", { group = cursor_group, command = "se nocul nocuc" })
-autocmd("InsertEnter", { group = cursor_group, command = "se cul cuc" })
+autocmd("InsertLeave", { group = cursor_group, command = "setlocal nocursorline nocursorcolumn" })
+autocmd("InsertEnter", { group = cursor_group, command = "setlocal cursorline cursorcolumn" })
 
 -- ─── Filetype-specific indentation ────────────────────────────────────────
 local indent_group = augroup("FiletypeIndent", { clear = true })
 
-autocmd({ "BufRead", "BufNewFile" }, {
+autocmd("FileType", {
   group = indent_group,
-  pattern = { "*.py" },
-  command = "set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent",
+  pattern = { "python" },
+  command = "setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab autoindent",
 })
-autocmd({ "BufRead", "BufNewFile" }, {
+autocmd("FileType", {
   group = indent_group,
-  pattern = { "*.lua", "*.vim" },
-  command = "set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent",
+  pattern = { "lua", "vim" },
+  command = "setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab autoindent",
 })
-autocmd({ "BufRead", "BufNewFile" }, {
+autocmd("FileType", {
   group = indent_group,
-  pattern = { "*.tsx", "*.ts", "*.js", "*.jsx", "*.axml", "*.acss", "*.json", "*.html", "*.htm", "*.less" },
-  command = "set shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab autoindent",
+  pattern = { "typescriptreact", "typescript", "javascript", "javascriptreact", "json", "html", "css", "scss", "sass", "less" },
+  command = "setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab autoindent",
 })
 
 -- ─── Filetype mappings ─────────────────────────────────────────────────────
@@ -35,4 +35,3 @@ autocmd({ "BufNewFile", "BufRead" }, { group = ft_group, pattern = "*.wxml",  co
 autocmd({ "BufNewFile", "BufRead" }, { group = ft_group, pattern = "*.wxss",  command = "set filetype=less" })
 autocmd({ "BufNewFile", "BufRead" }, { group = ft_group, pattern = "*.axml",  command = "set filetype=html" })
 autocmd({ "BufNewFile", "BufRead" }, { group = ft_group, pattern = "*.acss",  command = "set filetype=less" })
-autocmd({ "BufNewFile", "BufRead" }, { group = ft_group, pattern = { "*.scss", "*.sass" }, command = "set filetype=scss" })

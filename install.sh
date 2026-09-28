@@ -112,6 +112,16 @@ else
   warn "ripgrep not found — install for Telescope live grep: brew install ripgrep"
 fi
 
+# Treesitter's main branch requires the standalone parser compiler CLI.
+if command -v tree-sitter &>/dev/null; then
+  info "tree-sitter CLI already installed"
+elif command -v brew &>/dev/null; then
+  info "Installing tree-sitter CLI..."
+  run "brew install tree-sitter-cli"
+else
+  warn "tree-sitter CLI not found — install for Neovim parsers: brew install tree-sitter-cli"
+fi
+
 # ─── Nerd Fonts ───────────────────────────────────────────────────────────────
 echo ""
 echo "  Installing Nerd Font..."

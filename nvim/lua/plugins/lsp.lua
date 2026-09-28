@@ -33,7 +33,8 @@ return {
           "eslint",  -- ESLint via LSP
           "lua_ls",  -- Lua
         },
-        automatic_installation = true,
+        -- Servers are configured and enabled explicitly below.
+        automatic_enable = false,
       })
     end,
   },
@@ -48,13 +49,6 @@ return {
     },
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-      -- CompletionItemKind icons
-      vim.lsp.protocol.CompletionItemKind = {
-        "", "", "", "", "", "", "", "ﰮ", "", "",
-        "", "", "", "", "﬌", "", "", "", "", "",
-        "", "", "", "ﬦ", "",
-      }
 
       -- Diagnostic display
       vim.diagnostic.config({
@@ -80,8 +74,6 @@ return {
           map("n", "K",         "<cmd>Lspsaga hover_doc<CR>")
           map("n", "gh",        "<cmd>Lspsaga finder<CR>")
           map("n", "gp",        "<cmd>Lspsaga peek_definition<CR>")
-          map("n", "<C-j>",     "<cmd>Lspsaga diagnostic_jump_next<CR>")
-          map("n", "<S-C-j>",   "<cmd>Lspsaga diagnostic_jump_prev<CR>")
           map("i", "<C-k>",     "<cmd>lua vim.lsp.buf.signature_help()<CR>")
           map("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>")
           map("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>")
@@ -91,8 +83,6 @@ return {
           map("n", "<space>ca", "<cmd>Lspsaga code_action<CR>")
           map("n", "<space>e",  "<cmd>lua vim.diagnostic.open_float()<CR>")
           map("n", "<space>q",  "<cmd>lua vim.diagnostic.setloclist()<CR>")
-          map("n", "<space>f",  "<cmd>lua vim.lsp.buf.format({ async = true })<CR>")
-
           -- Disable ts_ls formatting (conform.nvim handles it)
           if client and client.name == "ts_ls" then
             client.server_capabilities.documentFormattingProvider = false

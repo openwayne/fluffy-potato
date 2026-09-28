@@ -62,7 +62,11 @@ opt.errorbells = false
 opt.wildignore:append("*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png,*.gif,*.jpeg,.DS_Store,node_modules/*")
 
 -- Plugin-specific globals
-vim.g.move_key_modifier = "C"
+-- Reserve Ctrl+h/j/k/l for window navigation.
+vim.g.move_key_modifier = "A"
+vim.g.move_key_modifier_visualmode = "A"
+-- Let nvim-cmp own Tab; Copilot acceptance is mapped separately.
+vim.g.copilot_no_tab_map = true
 vim.g.EasyMotion_leader_key = ","
 vim.g.rustfmt_autosave = 1
 vim.g.startify_custom_header = { "FUCKING EVERY DAY!" }
